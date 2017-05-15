@@ -24,6 +24,7 @@
 #import <IQKeyboardManager.h> // 键盘管理工具
 #import "UIViewController+Category.h" // UIViewController延展
 #import "LineView.h" // 全局分割线
+#import <UIViewController+MMDrawerController.h>
 
 #endif /* PrefixHeader_pch */
 

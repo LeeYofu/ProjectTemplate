@@ -7,12 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "CustomTabBarController.h"
 #import <UMMobClick/MobClick.h>
-//#import <JSPatchPlatform/JSPatch.h>
+#import <JSPatchPlatform/JSPatch.h>
 #import "AppDelegate+LaunchAD.h"
+#import <MMDrawerController.h>
+#import "MMExampleDrawerVisualStateManager.h"
+#import "CustomTabBarController.h"
+#import "CustomNavigationController.h"
+#import "UserCenterViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) MMDrawerController * drawerController;
 
 @end
 
@@ -72,7 +78,55 @@
     [self setupLaunchAD];
 }
 
+#pragma mark - window的rootVC
+- (MMDrawerController *)createWindowRootViewController {
+    
+    [MMExampleDrawerVisualStateManager sharedManager].leftDrawerAnimationType = MMDrawerAnimationTypeSlide;
+    
+    UserCenterViewController *userCenterVC = [UserCenterViewController new];
+    CustomTabBarController *tabBarC = [CustomTabBarController new];
+    CustomNavigationController *userCenterNaviC = [[CustomNavigationController alloc] initWithRootViewController:userCenterVC];
+    
+    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:userCenterNaviC];
+    
+    [self.drawerController setShowsShadow:NO];
+
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    
+    [self.drawerController setMaximumLeftDrawerWidth:kScreenWidth - 80];
+
+    [self.drawerController setAnimationVelocity:1200.0f];
+    
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    //左右 控制器打开的效果 这里设置了 视觉差 效果
+    [self.drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+        
+        MMDrawerControllerDrawerVisualStateBlock block;
+        //左边/右边 控制器 view 的变化效果
+        block = [[MMExampleDrawerVisualStateManager sharedManager] drawerVisualStateBlockForDrawerSide:drawerSide];
+        if(block) {
+            
+            block(drawerController, drawerSide, percentVisible);
+        }
+        
+//        UIViewController * sideDrawerViewController;
+//        if(drawerSide == MMDrawerSideLeft){
+//            sideDrawerViewController = drawerController.leftDrawerViewController;
+//        }
+//        else if(drawerSide == MMDrawerSideRight){
+//            sideDrawerViewController = drawerController.rightDrawerViewController;
+//        }
+        [drawerController.centerViewController.view setAlpha:(1 - percentVisible * 0.35)];
+    }];
+    
+    return self.drawerController;
+}
+
 #pragma mark - Launched --------------------------------------
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self configWithApplication:application launchOptions:launchOptions];
@@ -80,8 +134,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    CustomTabBarController *tabBarC = [CustomTabBarController new];
-    self.window.rootViewController = tabBarC;
+//    CustomTabBarController *tabBarC = [CustomTabBarController new];
+//    self.window.rootViewController = tabBarC;
+    self.window.rootViewController = [self createWindowRootViewController];
     
     [self.window makeKeyAndVisible];
     

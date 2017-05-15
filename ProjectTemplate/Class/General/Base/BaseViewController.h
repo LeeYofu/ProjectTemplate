@@ -12,7 +12,7 @@
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, strong) CustomNavigationBar *cNavigationBar;
-@property (nonatomic, copy) NSString *cNavigationBarTitle;
+//@property (nonatomic, copy) NSString *cNavigationBarTitle;
 
 - (void)config;
 - (void)createSubviews;

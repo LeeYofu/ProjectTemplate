@@ -80,11 +80,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)setCNavigationBarTitle:(NSString *)cNavigationBarTitle {
-    
-    _cNavigationBarTitle = cNavigationBarTitle;
-    self.cNavigationBar.title = cNavigationBarTitle;
-}
+//- (void)setCNavigationBarTitle:(NSString *)cNavigationBarTitle {
+//    
+//    _cNavigationBarTitle = cNavigationBarTitle;
+//    self.cNavigationBar.title = cNavigationBarTitle;
+//}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
