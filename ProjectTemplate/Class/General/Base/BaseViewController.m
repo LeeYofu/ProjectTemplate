@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
 
 @interface BaseViewController () <CustomNavigationBarDelegate>
 
@@ -19,7 +20,7 @@
     
     if (_cNavigationBar == nil) {
         
-        _cNavigationBar = [CustomNavigationBar new];
+        _cNavigationBar = [[CustomNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.width, kNavigationBarHeight)];
         _cNavigationBar.delegate = self;
         _cNavigationBar.backButtonHidden = self.navigationController.viewControllers.count <= 1;
         [self.view addSubview:_cNavigationBar];
@@ -57,7 +58,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.view.backgroundColor = kWhiteColor;
     
     [self config];
     [self createSubviews];
@@ -66,7 +66,8 @@
 #pragma mark - Public
 - (void)config {
     
-    
+    self.view.backgroundColor = kWhiteColor;
+    self.fd_prefersNavigationBarHidden = YES;
 }
 
 - (void)createSubviews {
@@ -80,11 +81,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-//- (void)setCNavigationBarTitle:(NSString *)cNavigationBarTitle {
-//    
-//    _cNavigationBarTitle = cNavigationBarTitle;
-//    self.cNavigationBar.title = cNavigationBarTitle;
-//}
+- (void)setCNavigationBarTitle:(NSString *)cNavigationBarTitle {
+    
+    _cNavigationBarTitle = cNavigationBarTitle;
+    self.cNavigationBar.title = cNavigationBarTitle;
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     

@@ -19,8 +19,7 @@ pod 'MMDrawerController'
 pod 'LEETheme'
 pod 'FHHFPSIndicator'
 pod 'AvoidCrash'
-
-
+pod 'FDFullscreenPopGesture'
 
 
 

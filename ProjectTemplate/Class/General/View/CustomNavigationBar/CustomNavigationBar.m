@@ -17,11 +17,10 @@
 
 @implementation CustomNavigationBar
 
-- (instancetype)init {
+- (instancetype)initWithFrame:(CGRect)frame {
     
-    if (self = [super init]) {
+    if (self = [super initWithFrame:frame]) {
         
-        self.frame = CGRectMake(0, 0, kScreenWidth, kNavigationBarHeight);
         self.backgroundColor = kThemeColor;
         
         [self createSubviews];
@@ -35,10 +34,10 @@
     self.titleLabel = [UILabel new];
     CGFloat left_rightPadding = 50;
     CGFloat topPadding = 20;
-    self.titleLabel.frame = CGRectMake(left_rightPadding, topPadding, kScreenWidth - 2 * left_rightPadding, kNavigationBarHeight - topPadding);
+    self.titleLabel.frame = CGRectMake(left_rightPadding, topPadding, self.width - 2 * left_rightPadding, kNavigationBarHeight - topPadding);
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.textColor = kWhiteColor;
-    self.titleLabel.font = kFont_20;
+    self.titleLabel.font = kFont_18;
     [self addSubview:self.titleLabel];
     
     // backbutton

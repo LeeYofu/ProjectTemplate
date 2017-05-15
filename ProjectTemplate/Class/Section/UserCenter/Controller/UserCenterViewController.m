@@ -26,7 +26,8 @@
     [super config];
     
     self.view.backgroundColor = kWhiteColor;
-    self.cNavigationBar.title = @"UserCenter";
+    self.cNavigationBarTitle = @"UserCenter";
+    
 }
 
 @end
