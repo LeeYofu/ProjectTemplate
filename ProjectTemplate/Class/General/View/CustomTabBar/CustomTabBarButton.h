@@ -1,0 +1,15 @@
+//
+//  CustomTabBarButton.h
+//  ProjectTemplate
+//
+//  Created by 李友富 on 2017/2/14.
+//  Copyright © 2017年 李友富. All rights reserved.
+//
+
+#import "BaseButton.h"
+
+@interface CustomTabBarButton : BaseButton
+
+@property (nonatomic, strong) UITabBarItem *tabBarItem; // 传过来的 tabBarItem模型
+
+@end

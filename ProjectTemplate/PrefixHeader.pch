@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  ProjectTemplate
+//
+//  Created by 李友富 on 2017/2/14.
+//  Copyright © 2017年 李友富. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Macro.h" // 宏定义
+#import "UIView+Category.h" // UIView frame拓展
+#import "YFNetworkRequest.h" // 网络请求
+#import "YFSecurityUtil.h" // 加解密工具
+#import <SDAutoLayout.h> // 界面布局三方
+#import <UIImageView+WebCache.h> // SDWebImage
+#import "NSString+Category.h" // 包含字符串拓展
+#import "APPTool.h" // 程序工具类
+#import <MJExtension.h> // 转模型工具
+#import <IQKeyboardManager.h> // 键盘管理工具
+#import "UIViewController+Category.h" // UIViewController延展
+#import "LineView.h" // 全局分割线
+
+#endif /* PrefixHeader_pch */
+
+
+/*
+ ********** 上线注意问题 **********
+ 1、kIsDebug 调整为NO的状态；
+ 2、注意修改软件版本号；
+ 3、切换到正式服务器url
+ 
+*/
