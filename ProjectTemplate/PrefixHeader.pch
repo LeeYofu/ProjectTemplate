@@ -12,6 +12,8 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Macro.h" // 宏定义
 #import "UIView+Category.h" // UIView frame拓展
 #import "YFNetworkRequest.h" // 网络请求
@@ -27,13 +29,7 @@
 #import <UIViewController+MMDrawerController.h>
 #import <UIScrollView+EmptyDataSet.h>
 #import <LEETheme.h>
-
-typedef NS_ENUM(NSInteger, EmptyDataType) {
-    
-    EmptyDataType_Loading,
-    EmptyDataType_NoData,
-    EmptyDataType_NetworkError
-};
+#import "UIImage+Category.h"
 
 #endif /* PrefixHeader_pch */
 

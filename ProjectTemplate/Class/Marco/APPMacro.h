@@ -23,4 +23,13 @@
 
 
 
+typedef NS_ENUM(NSInteger, EmptyDataType) {
+    
+    EmptyDataType_Loading,
+    EmptyDataType_NoData,
+    EmptyDataType_NetworkError
+};
+
 #endif /* APPMarco_h */
+
+

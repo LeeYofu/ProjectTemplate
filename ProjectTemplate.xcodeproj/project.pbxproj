@@ -10,6 +10,7 @@
 		231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */; };
 		231EA7B11ECAEFA600321974 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7B01ECAEFA600321974 /* BaseScrollView.m */; };
 		231EA7B41ECAF2DC00321974 /* TestTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7B31ECAF2DC00321974 /* TestTableView.m */; };
+		231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7B61ECAF99400321974 /* UIImage+Category.m */; };
 		234CDA531E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */; };
 		2357CE251E5FD1AD00629D2D /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2357CE241E5FD1AD00629D2D /* MainPageViewController.m */; };
 		2357CE5A1E5FDA5500629D2D /* IMG_1485.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE571E5FDA5500629D2D /* IMG_1485.JPG */; };
@@ -81,6 +82,8 @@
 		231EA7B01ECAEFA600321974 /* BaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
 		231EA7B21ECAF2DC00321974 /* TestTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableView.h; sourceTree = "<group>"; };
 		231EA7B31ECAF2DC00321974 /* TestTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableView.m; sourceTree = "<group>"; };
+		231EA7B51ECAF99400321974 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		231EA7B61ECAF99400321974 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		234CDA511E5E91F700E2D9A4 /* AppDelegate+LaunchAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LaunchAD.h"; sourceTree = "<group>"; };
 		234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LaunchAD.m"; sourceTree = "<group>"; };
 		2357CE231E5FD1AD00629D2D /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
@@ -213,6 +216,13 @@
 			path = MMExampleDrawerVisualStateManager;
 			sourceTree = "<group>";
 		};
+		231EA7B81ECAFADE00321974 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		2357CE171E5FD18A00629D2D /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +294,8 @@
 				239508311E5D799B00F7BC7D /* UIView+Category.m */,
 				239508371E5D7E1B00F7BC7D /* UIViewController+Category.h */,
 				239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */,
+				231EA7B51ECAF99400321974 /* UIImage+Category.h */,
+				231EA7B61ECAF99400321974 /* UIImage+Category.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -541,6 +553,7 @@
 		23FA7D071E52E91C005F5A17 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				231EA7B81ECAFADE00321974 /* Other */,
 				23FA7D081E52E91C005F5A17 /* Font */,
 				23FA7D091E52E91C005F5A17 /* Image */,
 				23FA7D0A1E52E91C005F5A17 /* Sound */,
@@ -864,6 +877,7 @@
 				23BFE3C01EC97ECD00ECF5FE /* UserCenterViewController.m in Sources */,
 				239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */,
 				237CA1661E5692A900182FE2 /* BaseModel.m in Sources */,
+				231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */,
 				231EA7B11ECAEFA600321974 /* BaseScrollView.m in Sources */,
 				23FA7D271E52EBD5005F5A17 /* BaseTextField.m in Sources */,
 				2357CE6C1E5FF0FB00629D2D /* LineView.m in Sources */,
