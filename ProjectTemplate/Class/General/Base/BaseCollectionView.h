@@ -10,4 +10,8 @@
 
 @interface BaseCollectionView : UICollectionView
 
+- (void)config;
+- (void)createSubviews;
+- (void)loadData;
+
 @end

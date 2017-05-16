@@ -9,22 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "CustomNavigationBar.h"
 
-typedef NS_ENUM(NSInteger, EmptyDataType) {
-    
-    EmptyDataType_Loading,
-    EmptyDataType_NoData,
-    EmptyDataType_NetworkError
-};
-
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, strong) CustomNavigationBar *cNavigationBar;
 @property (nonatomic, copy) NSString *cNavigationBarTitle;
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, assign) EmptyDataType emptyDataType;
-
 - (void)config;
 - (void)createSubviews;
+- (void)loadData;
 
 @end

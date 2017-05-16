@@ -1,14 +1,18 @@
 //
-//  BaseCollectionViewCell.m
+//  BaseScrollView.m
 //  ProjectTemplate
 //
-//  Created by 李友富 on 2017/2/24.
+//  Created by 李友富 on 2017/5/16.
 //  Copyright © 2017年 李友富. All rights reserved.
 //
 
-#import "BaseCollectionViewCell.h"
+#import "BaseScrollView.h"
 
-@implementation BaseCollectionViewCell
+@interface BaseScrollView() <DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
+
+@end
+
+@implementation BaseScrollView
 
 - (instancetype)init {
     
@@ -39,4 +43,8 @@
     
     
 }
+
+
+
+
 @end

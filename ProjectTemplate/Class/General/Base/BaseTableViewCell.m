@@ -14,7 +14,7 @@
     
     if (self = [super init]) {
         
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self config];
         [self createSubviews];
     }
     return self;
@@ -24,7 +24,7 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self config];
         [self createSubviews];
     }
     return self;
@@ -34,10 +34,15 @@
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self config];
         [self createSubviews];
     }
     return self;
+}
+
+- (void)config {
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)createSubviews {

@@ -10,4 +10,10 @@
 
 @interface BaseTableView : UITableView
 
+@property (nonatomic, assign) EmptyDataType emptyDataType;
+
+- (void)config;
+- (void)createSubviews;
+- (void)loadData;
+
 @end

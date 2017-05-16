@@ -8,14 +8,55 @@
 
 #import "BaseCollectionView.h"
 
+@interface BaseCollectionView()
+
+@end
+
 @implementation BaseCollectionView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        
+        [self config];
+        [self createSubviews];
+    }
+    return self;
 }
-*/
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        [self config];
+        [self createSubviews];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
+    
+    if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
+        
+        [self config];
+        [self createSubviews];
+    }
+    return self;
+}
+
+- (void)config {
+    
+    
+}
+
+- (void)createSubviews {
+    
+    
+}
+
+- (void)loadData {
+    
+    
+}
 
 @end

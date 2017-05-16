@@ -22,6 +22,7 @@
     if (self = [super initWithFrame:frame]) {
         
         self.backgroundColor = kThemeColor;
+        self.lee_theme.LeeAddBackgroundColor(@"orange", kThemeColor).LeeAddBackgroundColor(@"red", kRedColor);
         
         [self createSubviews];
     }

@@ -39,6 +39,7 @@
 //    [self setUpJSPatch];
 //    [self setUpLaunchADView];
     [self setUpAvoidCrash];
+    [self setUpLeeTheme];
 }
 
 #pragma mark - 设置textField、textView的光标颜色
@@ -85,6 +86,7 @@
     [self setupLaunchAD];
 }
 
+#pragma mark - avoid carsh
 - (void)setUpAvoidCrash {
     
     if (kIsDebug == NO) {
@@ -99,6 +101,18 @@
     // 注意:所有的信息都在userInfo中
     // 你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
     NSLog(@"%@",note.userInfo);
+}
+
+#pragma mark - 主题
+- (void)setUpLeeTheme {
+    
+    // 设置默认主题
+    [LEETheme defaultTheme:@"red"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [LEETheme startTheme:@"orange"];
+    });
 }
 
 #pragma mark - window的rootVC
@@ -135,13 +149,6 @@
             block(drawerController, drawerSide, percentVisible);
         }
         
-//        UIViewController * sideDrawerViewController;
-//        if(drawerSide == MMDrawerSideLeft){
-//            sideDrawerViewController = drawerController.leftDrawerViewController;
-//        }
-//        else if(drawerSide == MMDrawerSideRight){
-//            sideDrawerViewController = drawerController.rightDrawerViewController;
-//        }
         [drawerController.centerViewController.view setAlpha:(1 - percentVisible * 0.35)];
     }];
     
@@ -157,8 +164,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-//    CustomTabBarController *tabBarC = [CustomTabBarController new];
-//    self.window.rootViewController = tabBarC;
     self.window.rootViewController = [self createWindowRootViewController];
     
     [self.window makeKeyAndVisible];

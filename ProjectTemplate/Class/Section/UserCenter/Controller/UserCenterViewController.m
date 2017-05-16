@@ -8,8 +8,7 @@
 
 #import "UserCenterViewController.h"
 
-@interface UserCenterViewController () <UITableViewDelegate, UITableViewDataSource>
-
+@interface UserCenterViewController ()
 @end
 
 @implementation UserCenterViewController
@@ -34,21 +33,7 @@
     
     [super createSubviews];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
-    NSLog(@"%@", NSStringFromCGRect(self.tableView.frame));
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    return cell;
-}
 
 @end

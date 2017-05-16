@@ -10,6 +10,7 @@
 
 @interface BaseTableViewCell : UITableViewCell
 
+- (void)config;
 - (void)createSubviews;
 
 @end

@@ -26,6 +26,14 @@
 #import "LineView.h" // 全局分割线
 #import <UIViewController+MMDrawerController.h>
 #import <UIScrollView+EmptyDataSet.h>
+#import <LEETheme.h>
+
+typedef NS_ENUM(NSInteger, EmptyDataType) {
+    
+    EmptyDataType_Loading,
+    EmptyDataType_NoData,
+    EmptyDataType_NetworkError
+};
 
 #endif /* PrefixHeader_pch */
 

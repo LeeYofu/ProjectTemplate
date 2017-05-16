@@ -19,4 +19,8 @@
 #define kMobClickKey @"" // 友盟统计app key
 #define kJSPatchKey @"" // JSPatch热修复 key
 
+
+
+
+
 #endif /* APPMarco_h */
