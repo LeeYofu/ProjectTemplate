@@ -34,14 +34,9 @@
     
     [super createSubviews];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationBarHeight, self.cNavigationBar.width, kScreenHeight - kNavigationBarHeight)];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
-    NSLog(@"%@", NSStringFromCGRect(tableView.frame));
+    NSLog(@"%@", NSStringFromCGRect(self.tableView.frame));
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

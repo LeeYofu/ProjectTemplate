@@ -20,6 +20,8 @@ pod 'LEETheme'
 pod 'FHHFPSIndicator'
 pod 'AvoidCrash'
 pod 'FDFullscreenPopGesture'
+pod 'DZNEmptyDataSet'
+
 
 
 
