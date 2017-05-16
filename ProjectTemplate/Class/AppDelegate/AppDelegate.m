@@ -15,6 +15,7 @@
 #import "CustomTabBarController.h"
 #import "CustomNavigationController.h"
 #import "UserCenterViewController.h"
+#import <AvoidCrash.h>
 
 @interface AppDelegate ()
 
@@ -24,6 +25,11 @@
 
 @implementation AppDelegate
 
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - config
 - (void)configWithApplication:(UIApplication *)application launchOptions:(NSDictionary *)launchOptions {
     
@@ -32,6 +38,7 @@
     [self setUpMobClick];
 //    [self setUpJSPatch];
 //    [self setUpLaunchADView];
+    [self setUpAvoidCrash];
 }
 
 #pragma mark - 设置textField、textView的光标颜色
@@ -64,18 +71,34 @@
 }
 
 #pragma mark - js热修复
-//- (void)setUpJSPatch {
-//    
-//    [JSPatch startWithAppKey:kJSPatchKey];
-//    [JSPatch sync];
-//    
-////    [JSPatch testScriptInBundle]; // 用于本地文件测试
-//}
+- (void)setUpJSPatch {
+    
+    [JSPatch startWithAppKey:kJSPatchKey];
+    [JSPatch sync];
+    
+//    [JSPatch testScriptInBundle]; // 用于本地文件测试
+}
 
 #pragma mark - 加载启动广告页面
 - (void)setUpLaunchADView {
     
     [self setupLaunchAD];
+}
+
+- (void)setUpAvoidCrash {
+    
+    if (kIsDebug == NO) {
+        
+        [AvoidCrash becomeEffective];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
+    }
+}
+
+- (void)dealwithCrashMessage:(NSNotification *)note {
+    
+    // 注意:所有的信息都在userInfo中
+    // 你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
+    NSLog(@"%@",note.userInfo);
 }
 
 #pragma mark - window的rootVC

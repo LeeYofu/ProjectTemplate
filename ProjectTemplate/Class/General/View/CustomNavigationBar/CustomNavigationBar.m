@@ -63,8 +63,6 @@
     
     _title = title;
     self.titleLabel.text = title;
-    
-    NSLog(@"title = %@", title);
 }
 
 - (void)setBackButtonHidden:(BOOL)backButtonHidden {

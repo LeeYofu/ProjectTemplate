@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */; };
 		234CDA531E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */; };
 		2357CE251E5FD1AD00629D2D /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2357CE241E5FD1AD00629D2D /* MainPageViewController.m */; };
 		2357CE5A1E5FDA5500629D2D /* IMG_1485.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE571E5FDA5500629D2D /* IMG_1485.JPG */; };
@@ -23,7 +24,6 @@
 		239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */; };
 		2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */; };
 		23BFE3C01EC97ECD00ECF5FE /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BFE3BF1EC97ECD00ECF5FE /* UserCenterViewController.m */; };
-		23BFE3C31EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BFE3C21EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.m */; };
 		23FA7CC81E52D75C005F5A17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FA7CC71E52D75C005F5A17 /* main.m */; };
 		23FA7CD11E52D75C005F5A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FA7CCF1E52D75C005F5A17 /* Main.storyboard */; };
 		23FA7CD31E52D75C005F5A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FA7CD21E52D75C005F5A17 /* Assets.xcassets */; };
@@ -73,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231EA7AC1ECA910B00321974 /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
+		231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		234CDA511E5E91F700E2D9A4 /* AppDelegate+LaunchAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LaunchAD.h"; sourceTree = "<group>"; };
 		234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LaunchAD.m"; sourceTree = "<group>"; };
 		2357CE231E5FD1AD00629D2D /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
@@ -101,8 +103,6 @@
 		2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 		23BFE3BE1EC97ECD00ECF5FE /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		23BFE3BF1EC97ECD00ECF5FE /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
-		23BFE3C11EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
-		23BFE3C21EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		23FA7CC31E52D75C005F5A17 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FA7CC71E52D75C005F5A17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23FA7CD01E52D75C005F5A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,6 +198,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231EA7AB1ECA910B00321974 /* MMExampleDrawerVisualStateManager */ = {
+			isa = PBXGroup;
+			children = (
+				231EA7AC1ECA910B00321974 /* MMExampleDrawerVisualStateManager.h */,
+				231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */,
+			);
+			path = MMExampleDrawerVisualStateManager;
+			sourceTree = "<group>";
+		};
 		2357CE171E5FD18A00629D2D /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,8 +523,7 @@
 		23FA7D051E52E91C005F5A17 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				23BFE3C11EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.h */,
-				23BFE3C21EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.m */,
+				231EA7AB1ECA910B00321974 /* MMExampleDrawerVisualStateManager */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -831,7 +839,7 @@
 				23FA7D5B1E52FEAB005F5A17 /* NSJSONSerialization+YFJson.m in Sources */,
 				234CDA531E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m in Sources */,
 				23FA7D1B1E52EB86005F5A17 /* CustomTabBarController.m in Sources */,
-				23BFE3C31EC981D700ECF5FE /* MMExampleDrawerVisualStateManager.m in Sources */,
+				231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				23FA7D521E52FE93005F5A17 /* NSData+YFAES.m in Sources */,
 				23FA7CC81E52D75C005F5A17 /* main.m in Sources */,
 				2357CE5F1E5FE12A00629D2D /* BaseCollectionView.m in Sources */,

@@ -24,33 +24,33 @@ typedef void(^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 @interface YFNetworkRequest : AFHTTPSessionManager
 
 // GET请求（无缓存）
-+ (void)getWithSubUrl:(NSString *)subUrlString
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString
            parameters:(id)parameters
                sucess:(SucessBlock)sucess
               failure:(FailureBlock)failure;
 
 // GET请求（有缓存）
-+ (void)getWithSubUrl:(NSString *)subUrlString
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString
            parameters:(id)parameters
           cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy
                sucess:(SucessBlock)sucess
               failure:(FailureBlock)failure;
 
 // POST请求（无缓存）
-+ (void)postWithSubUrl:(NSString *)subUrlString
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString
             parameters:(id)parameters
                 sucess:(SucessBlock)sucess
                failure:(FailureBlock)failure;
 
 // POST请求（有缓存）
-+ (void)postWithSubUrl:(NSString *)subUrlString
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString
             parameters:(id)parameters
            cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy
                 sucess:(SucessBlock)sucess
                failure:(FailureBlock)failure;
 
 // 上传图片/视频
-+ (void)postWithSubUrl:(NSString *)subUrl
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrl
             parameters:(id)parameters
             imageDatas:(NSArray *)imageDatas
             imageNames:(NSArray *)imageNames

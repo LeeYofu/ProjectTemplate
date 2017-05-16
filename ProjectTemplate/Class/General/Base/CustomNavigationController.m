@@ -7,7 +7,6 @@
 //
 
 #import "CustomNavigationController.h"
-#import <UINavigationController+FDFullscreenPopGesture.h>
 
 @interface CustomNavigationController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
@@ -16,6 +15,7 @@
 @end
 
 @implementation CustomNavigationController
+
 
 #pragma mark - 返回按钮
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
