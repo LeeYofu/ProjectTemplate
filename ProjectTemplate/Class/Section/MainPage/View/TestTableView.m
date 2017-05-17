@@ -31,6 +31,10 @@
             self.emptyDataType = EmptyDataType_NetworkError;
         });
     });
+    
+//    [self showLoadingHUDWithText:@"8"];
+//    [self showTextHUDWithText:@"我是提示文本"];
+    [self showSuccessHUDWithText:@"success"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -27,6 +27,8 @@
 		239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */; };
 		2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */; };
 		23BFE3C01EC97ECD00ECF5FE /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BFE3BF1EC97ECD00ECF5FE /* UserCenterViewController.m */; };
+		23DE66F21ECBE6F000580812 /* JinyuProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */; };
+		23DE66F51ECBECAA00580812 /* UIView+JinyuProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DE66F41ECBECAA00580812 /* UIView+JinyuProgressHUD.m */; };
 		23FA7CC81E52D75C005F5A17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FA7CC71E52D75C005F5A17 /* main.m */; };
 		23FA7CD11E52D75C005F5A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FA7CCF1E52D75C005F5A17 /* Main.storyboard */; };
 		23FA7CD31E52D75C005F5A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FA7CD21E52D75C005F5A17 /* Assets.xcassets */; };
@@ -112,6 +114,10 @@
 		2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 		23BFE3BE1EC97ECD00ECF5FE /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		23BFE3BF1EC97ECD00ECF5FE /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		23DE66F01ECBE6F000580812 /* JinyuProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinyuProgressHUD.h; sourceTree = "<group>"; };
+		23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinyuProgressHUD.m; sourceTree = "<group>"; };
+		23DE66F31ECBECAA00580812 /* UIView+JinyuProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JinyuProgressHUD.h"; sourceTree = "<group>"; };
+		23DE66F41ECBECAA00580812 /* UIView+JinyuProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JinyuProgressHUD.m"; sourceTree = "<group>"; };
 		23FA7CC31E52D75C005F5A17 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FA7CC71E52D75C005F5A17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		23FA7CD01E52D75C005F5A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -296,6 +302,8 @@
 				239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */,
 				231EA7B51ECAF99400321974 /* UIImage+Category.h */,
 				231EA7B61ECAF99400321974 /* UIImage+Category.m */,
+				23DE66F31ECBECAA00580812 /* UIView+JinyuProgressHUD.h */,
+				23DE66F41ECBECAA00580812 /* UIView+JinyuProgressHUD.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -349,6 +357,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		23DE66EF1ECBE57800580812 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				23DE66F01ECBE6F000580812 /* JinyuProgressHUD.h */,
+				23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */,
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		23FA7CBA1E52D75C005F5A17 = {
@@ -503,6 +520,7 @@
 		23FA7D011E52E91C005F5A17 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				23DE66EF1ECBE57800580812 /* HUD */,
 				2357CE691E5FF0F300629D2D /* LineView */,
 				2396C4711E53EC4D007BD142 /* CustomNavigationBar */,
 				23FA7D371E52F199005F5A17 /* CustomTabBar */,
@@ -853,6 +871,7 @@
 				2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */,
 				23FA7D2A1E52EBE2005F5A17 /* BaseButton.m in Sources */,
 				23FA7D3D1E52F1FC005F5A17 /* CustomTabBarButton.m in Sources */,
+				23DE66F51ECBECAA00580812 /* UIView+JinyuProgressHUD.m in Sources */,
 				23FA7D1E1E52EB92005F5A17 /* BaseViewController.m in Sources */,
 				23FA7D511E52FE93005F5A17 /* GTMBase64.m in Sources */,
 				23FA7D551E52FE93005F5A17 /* YFSecurityUtil.m in Sources */,
@@ -868,6 +887,7 @@
 				23FA7CC81E52D75C005F5A17 /* main.m in Sources */,
 				2357CE5F1E5FE12A00629D2D /* BaseCollectionView.m in Sources */,
 				23FA7D5C1E52FEAB005F5A17 /* YFNetworkRequest.m in Sources */,
+				23DE66F21ECBE6F000580812 /* JinyuProgressHUD.m in Sources */,
 				2357CE651E5FE28100629D2D /* BaseCollectionViewCell.m in Sources */,
 				2357CE251E5FD1AD00629D2D /* MainPageViewController.m in Sources */,
 				23FA7D331E52EC12005F5A17 /* BaseImageView.m in Sources */,
