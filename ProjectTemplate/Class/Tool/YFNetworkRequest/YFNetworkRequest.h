@@ -24,38 +24,18 @@ typedef void(^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 @interface YFNetworkRequest : AFHTTPSessionManager
 
 // GET请求（无缓存）
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString
-           parameters:(id)parameters
-               sucess:(SucessBlock)sucess
-              failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
 
 // GET请求（有缓存）
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString
-           parameters:(id)parameters
-          cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy
-               sucess:(SucessBlock)sucess
-              failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
 
 // POST请求（无缓存）
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString
-            parameters:(id)parameters
-                sucess:(SucessBlock)sucess
-               failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
 
 // POST请求（有缓存）
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString
-            parameters:(id)parameters
-           cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy
-                sucess:(SucessBlock)sucess
-               failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
 
 // 上传图片/视频
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrl
-            parameters:(id)parameters
-            imageDatas:(NSArray *)imageDatas
-            imageNames:(NSArray *)imageNames
-             videoData:(NSData *)videoData
-                sucess:(SucessBlock)sucess
-                failed:(FailureBlock)failure;
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrl parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData sucess:(SucessBlock)sucess failed:(FailureBlock)failure;
 
 @end

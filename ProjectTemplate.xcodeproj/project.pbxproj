@@ -368,6 +368,13 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
+		23DE66F61ECBFBEF00580812 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		23FA7CBA1E52D75C005F5A17 = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +560,7 @@
 		23FA7D041E52E91C005F5A17 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				23DE66F61ECBFBEF00580812 /* Manager */,
 				237CA1601E568F2700182FE2 /* APPTool */,
 				23FA7D561E52FEAB005F5A17 /* YFNetworkRequest */,
 				23FA7D441E52FE93005F5A17 /* YFSecurity */,

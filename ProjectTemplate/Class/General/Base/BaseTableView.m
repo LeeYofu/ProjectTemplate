@@ -72,6 +72,11 @@
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+}
+
 #pragma mark emptyData 代理方法
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
     

@@ -19,11 +19,11 @@
         
         HUD = [JinyuProgressHUD new];
         HUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-        HUD.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+        HUD.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.85];
         HUD.contentColor = [UIColor whiteColor];
         HUD.removeFromSuperViewOnHide = YES;
         HUD.userInteractionEnabled = NO;
-        HUD.animationType = MBProgressHUDAnimationZoom;
+        HUD.animationType = MBProgressHUDAnimationFade;
     });
     
     return HUD;

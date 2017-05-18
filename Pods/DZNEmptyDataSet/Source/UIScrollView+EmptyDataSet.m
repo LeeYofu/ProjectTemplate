@@ -95,7 +95,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
         
         view.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dzn_didTapContentView:)];
         view.tapGesture.delegate = self;
-        [self addGestureRecognizer:view.tapGesture];
+        [view addGestureRecognizer:view.tapGesture];
         
         [self setEmptyDataSetView:view];
     }

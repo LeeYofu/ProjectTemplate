@@ -91,6 +91,8 @@
     
     hud.frame = self.bounds;
     
+    [hud setMinSize:CGSizeZero];
+    
     [hud showAnimated:YES];
     
     if (text.length) {

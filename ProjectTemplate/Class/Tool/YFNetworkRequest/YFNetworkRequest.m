@@ -21,66 +21,39 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 @implementation YFNetworkRequest
 
 #pragma mark - public
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString
-           parameters:(id)parameters
-               sucess:(SucessBlock)sucess
-              failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
     
     return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
 }
 
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString
-           parameters:(id)parameters
-          cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy
-               sucess:(SucessBlock)sucess
-              failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
     
     return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
 }
 
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString
-            parameters:(id)parameters
-                sucess:(SucessBlock)sucess
-               failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
     
     return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
 }
 
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString
-            parameters:(id)parameters
-           cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy
-                sucess:(SucessBlock)sucess
-               failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
     
     return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
 }
 
 // 上传视频/图片
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrl
-            parameters:(id)parameters
-            imageDatas:(NSArray *)imageDatas
-            imageNames:(NSArray *)imageNames
-             videoData:(NSData *)videoData
-                sucess:(SucessBlock)sucess
-                failed:(FailureBlock)failure {
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrl parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData sucess:(SucessBlock)sucess failed:(FailureBlock)failure {
     
     return [[YFNetworkRequest sharedInstance] POST:subUrl parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         for (int i = 0; i < imageDatas.count; i++) {
             
-            [formData appendPartWithFileData:[imageDatas objectAtIndex:i]
-                                        name:[imageNames objectAtIndex:i]
-                                    fileName:[NSString stringWithFormat:@"%@.jpg",[imageNames objectAtIndex:i]]
-                                    mimeType:@"image/jpeg"];
-            
+            [formData appendPartWithFileData:[imageDatas objectAtIndex:i] name:[imageNames objectAtIndex:i] fileName:[NSString stringWithFormat:@"%@.jpg",[imageNames objectAtIndex:i]] mimeType:@"image/jpeg"];
         }
         
         if (videoData) {
             
-            [formData appendPartWithFileData:videoData
-                                        name:@"video"
-                                    fileName:[NSString stringWithFormat:@"%@.mp4",@"video"]
-                                    mimeType:@"video/mp4"];
+            [formData appendPartWithFileData:videoData name:@"video" fileName:[NSString stringWithFormat:@"%@.mp4",@"video"] mimeType:@"video/mp4"];
         }
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -99,11 +72,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 }
 
 #pragma mark - private
-+ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type
-         subUrlString:(NSString *)subUrlString parameters:(id)parameters
-          cachePolicy:(YFNetworkRequestCachePolicy)cachePolicy
-              success:(SucessBlock)success
-              failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type subUrlString:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)cachePolicy success:(SucessBlock)success failure:(FailureBlock)failure {
     
     NSURLSessionDataTask *task;
     
@@ -164,13 +133,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     return task;
 }
 
-+ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type
-            subUrlString:(NSString *)subUrlString
-           parameters:(id)parameters
-                cache:(YYCache *)cache
-             cacheKey:(NSString *)cacheKey
-              success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-              failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
++ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type subUrlString:(NSString *)subUrlString parameters:(id)parameters cache:(YYCache *)cache cacheKey:(NSString *)cacheKey success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     
     NSURLSessionDataTask *task;
     
