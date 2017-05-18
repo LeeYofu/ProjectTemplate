@@ -31,6 +31,15 @@
             self.emptyDataType = EmptyDataType_NetworkError;
         });
     });
+    
+    
+    [YFNetworkRequest getWithSubUrl:kGetDayKUrl parameters:nil sucess:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"responseObject = %@", responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        NSLog(@"error = %@", error);
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -14,11 +14,10 @@
  */
 
 // base url
-#define kBaseUrl @"http://m.cnxiaomubiao.com/smallgoal"
+#define kBaseUrl @"https://goldfishspot.qdztrk.com"
 
-#pragma mark - 用户信息相关 ==========
 // 登录
-#define kLoginUrl @"/user/login"
+#define kGetDayKUrl @"/goldfishfinance/quotation/echartData?bCode=SH0001&dType=DAY&count=500&quota=MA"
 
 
 

@@ -8,7 +8,8 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-#define BASEURLSTRING @"http://t16.beauityworld.com"
+// base url
+#define BASEURLSTRING kBaseUrl
 
 typedef NS_ENUM(NSUInteger, YFNetworkRequestCachePolicy) {
     

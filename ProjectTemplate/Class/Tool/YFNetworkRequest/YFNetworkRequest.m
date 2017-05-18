@@ -18,6 +18,11 @@ typedef NS_ENUM(NSUInteger, YFNetworkRequestType) {
 
 static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 
+@interface YFNetworkRequest()
+
+
+@end
+
 @implementation YFNetworkRequest
 
 #pragma mark - public
@@ -68,7 +73,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
             failure(task, error);
         }
     }];
-
+    
 }
 
 #pragma mark - private
@@ -191,6 +196,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         manager.requestSerializer.timeoutInterval = 30.0f;
         [manager.requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        
         manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/css", @"text/plain", nil];
     });
@@ -202,6 +208,5 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     return [[YFNetworkRequest alloc] initWithBaseURL:[NSURL URLWithString:BASEURLSTRING] sessionConfiguration:configuration];
 }
-
 
 @end
