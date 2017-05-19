@@ -38,6 +38,7 @@
 		23D858BC1ECD4C6C001007E0 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858AB1ECD4C6C001007E0 /* BaseTableViewCell.m */; };
 		23D858BD1ECD4C6C001007E0 /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858AD1ECD4C6C001007E0 /* BaseTextField.m */; };
 		23D858BE1ECD4C6C001007E0 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858AF1ECD4C6C001007E0 /* BaseView.m */; };
+		23D858C11ECD4CBA001007E0 /* BaseWebview.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858C01ECD4CBA001007E0 /* BaseWebview.m */; };
 		23DE66F21ECBE6F000580812 /* JinyuProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */; };
 		23DE66F51ECBECAA00580812 /* UIView+JinyuProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DE66F41ECBECAA00580812 /* UIView+JinyuProgressHUD.m */; };
 		23FA7CC81E52D75C005F5A17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FA7CC71E52D75C005F5A17 /* main.m */; };
@@ -137,6 +138,8 @@
 		23D858AD1ECD4C6C001007E0 /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
 		23D858AE1ECD4C6C001007E0 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		23D858AF1ECD4C6C001007E0 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		23D858BF1ECD4CBA001007E0 /* BaseWebview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebview.h; sourceTree = "<group>"; };
+		23D858C01ECD4CBA001007E0 /* BaseWebview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebview.m; sourceTree = "<group>"; };
 		23DE66F01ECBE6F000580812 /* JinyuProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinyuProgressHUD.h; sourceTree = "<group>"; };
 		23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinyuProgressHUD.m; sourceTree = "<group>"; };
 		23DE66F31ECBECAA00580812 /* UIView+JinyuProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JinyuProgressHUD.h"; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				23D858AD1ECD4C6C001007E0 /* BaseTextField.m */,
 				23D858AE1ECD4C6C001007E0 /* BaseView.h */,
 				23D858AF1ECD4C6C001007E0 /* BaseView.m */,
+				23D858BF1ECD4CBA001007E0 /* BaseWebview.h */,
+				23D858C01ECD4CBA001007E0 /* BaseWebview.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -937,6 +942,7 @@
 				23BFE3C01EC97ECD00ECF5FE /* UserCenterViewController.m in Sources */,
 				23D858B01ECD4C6C001007E0 /* BaseViewController.m in Sources */,
 				239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */,
+				23D858C11ECD4CBA001007E0 /* BaseWebview.m in Sources */,
 				231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */,
 				2357CE6C1E5FF0FB00629D2D /* LineView.m in Sources */,
 				23FA7D531E52FE93005F5A17 /* NSString+YFDES.m in Sources */,

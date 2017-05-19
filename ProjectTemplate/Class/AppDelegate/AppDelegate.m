@@ -25,7 +25,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark - config
+#pragma mark - config ------------------------------------------
 - (void)configWithApplication:(UIApplication *)application launchOptions:(NSDictionary *)launchOptions {
     
     [self setUpTextFieldTextViewColor];
@@ -110,14 +110,8 @@
     });
 }
 
-#pragma mark - window的rootVC
-- (MMDrawerController *)createWindowRootViewController {
-    
-    return [CustomDrawerController drawerController];
-}
 
 #pragma mark - Launched --------------------------------------
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self configWithApplication:application launchOptions:launchOptions];
@@ -125,7 +119,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [self createWindowRootViewController];
+    self.window.rootViewController = [CustomDrawerController drawerController];
     
     [self.window makeKeyAndVisible];
     

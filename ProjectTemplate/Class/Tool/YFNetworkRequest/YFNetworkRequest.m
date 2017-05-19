@@ -14,6 +14,8 @@ typedef NS_ENUM(NSUInteger, YFNetworkRequestType) {
     
     YFNetworkRequestTypeGET = 0,
     YFNetworkRequestTypePOST,
+    YFNetworkRequestTypePUT,
+    YFNetworkRequestTypeDELETE
 };
 
 static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
@@ -46,10 +48,30 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
 }
 
-// 上传视频/图片
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrl parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData sucess:(SucessBlock)sucess failed:(FailureBlock)failure {
++ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
     
-    return [[YFNetworkRequest sharedInstance] POST:subUrl parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
+}
+
++ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+    
+    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
+}
+
++ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+    
+    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
+}
+
++ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+    
+    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
+}
+
+// 上传视频/图片
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+    
+    return [[YFNetworkRequest sharedInstance] POST:subUrlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         for (int i = 0; i < imageDatas.count; i++) {
             
@@ -178,10 +200,44 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
             }];
             break;
         }
+        case YFNetworkRequestTypePUT : {
+            
+            task = [[YFNetworkRequest sharedInstance] PUT:subUrlString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                if ([responseObject isKindOfClass:[NSData class]]) {
+                    
+                    responseObject = [NSJSONSerialization objectWithJSONData:responseObject];
+                }
+                
+                [cache setObject:responseObject forKey:cacheKey]; // YYCache 已经做了responseObject为空处理
+                success(task,responseObject);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                
+                failure(task, error);
+            }];
+            break;
+        }
+        case YFNetworkRequestTypeDELETE : {
+            
+            task = [[YFNetworkRequest sharedInstance] DELETE:subUrlString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                if ([responseObject isKindOfClass:[NSData class]]) {
+                    
+                    responseObject = [NSJSONSerialization objectWithJSONData:responseObject];
+                }
+                
+                [cache setObject:responseObject forKey:cacheKey]; // YYCache 已经做了responseObject为空处理
+                success(task,responseObject);
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                
+                failure(task, error);
+            }];
+            break;
+        }
         default:
             break;
     }
-    
+
     return task;
 }
 

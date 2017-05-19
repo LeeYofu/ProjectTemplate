@@ -21,7 +21,7 @@
 
 + (instancetype)drawerController {
     
-    [MMExampleDrawerVisualStateManager sharedManager].leftDrawerAnimationType = MMDrawerAnimationTypeSlide;
+    [MMExampleDrawerVisualStateManager sharedManager].leftDrawerAnimationType = MMDrawerAnimationTypeSwingingDoor;
     
     UserCenterViewController *userCenterVC = [UserCenterViewController new];
     CustomTabBarController *tabBarC = [CustomTabBarController new];
@@ -29,23 +29,20 @@
     
     CustomDrawerController *drawerController = [[CustomDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:userCenterNaviC];
     
-    [drawerController setShowsShadow:NO];
+    drawerController.showsShadow = NO;
     
-    [drawerController setRestorationIdentifier:@"MMDrawer"];
+    drawerController.maximumLeftDrawerWidth = kScreenWidth - 80;
     
-    [drawerController setMaximumLeftDrawerWidth:kScreenWidth - 80];
+    drawerController.animationVelocity = 1200.0f;
     
-    [drawerController setAnimationVelocity:1200.0f];
+    drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    
-    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     
     //左右 控制器打开的效果 这里设置了 视觉差 效果
     [drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
         
         MMDrawerControllerDrawerVisualStateBlock block;
-        //左边/右边 控制器 view 的变化效果
         block = [[MMExampleDrawerVisualStateManager sharedManager] drawerVisualStateBlockForDrawerSide:drawerSide];
         if(block) {
             
