@@ -33,7 +33,7 @@
     });
     
     
-    [YFNetworkRequest getWithSubUrl:kGetDayKUrl parameters:nil sucess:^(NSURLSessionDataTask *task, id responseObject) {
+    [YFNetworkRequest getWithSubUrl:kGetDayKUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSLog(@"responseObject = %@", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

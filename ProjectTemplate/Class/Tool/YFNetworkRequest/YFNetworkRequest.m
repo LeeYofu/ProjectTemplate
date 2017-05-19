@@ -28,48 +28,52 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 @implementation YFNetworkRequest
 
 #pragma mark - public
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+#pragma mark GET
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+#pragma mark POST
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+#pragma mark PUT
++ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
+#pragma mark DELETE
++ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:sucess failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
 // 上传视频/图片
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData sucess:(SucessBlock)sucess failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData success:(SuccessBlock)success failure:(FailureBlock)failure {
     
     return [[YFNetworkRequest sharedInstance] POST:subUrlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
@@ -84,9 +88,9 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
         }
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        if (sucess) {
+        if (success) {
             
-            sucess(task, responseObject);
+            success(task, responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -99,7 +103,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 }
 
 #pragma mark - private
-+ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type subUrlString:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)cachePolicy success:(SucessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type subUrlString:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)cachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
     NSURLSessionDataTask *task;
     

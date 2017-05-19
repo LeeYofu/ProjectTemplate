@@ -19,41 +19,41 @@ typedef NS_ENUM(NSUInteger, YFNetworkRequestCachePolicy) {
     YFNetworkRequestReturnCacheDataDontLoad // 有缓存就用缓存，没有缓存就不发请求，当做请求出错处理（用于离线模式）
 };
 
-typedef void(^SucessBlock)(NSURLSessionDataTask *task, id responseObject);
+typedef void(^SuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 typedef void(^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 
 @interface YFNetworkRequest : AFHTTPSessionManager
 
 #pragma mark GET
 // GET请求（无缓存）
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 // GET请求（有缓存）
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 #pragma mark POST
 // POST请求（无缓存）
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 // POST请求（有缓存）
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 #pragma mark PUT
 // PUT请求（无缓存）
-+ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 // PUT请求（有缓存）
-+ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 #pragma mark DELETE
 // DELETE请求（无缓存）
-+ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 // DELETE请求（有缓存）
-+ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 #pragma mark IMAGE/VIDEO
 // 上传图片/视频
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData sucess:(SucessBlock)sucess failure:(FailureBlock)failure;
++ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 @end

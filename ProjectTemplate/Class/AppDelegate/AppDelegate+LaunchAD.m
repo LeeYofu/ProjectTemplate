@@ -35,7 +35,7 @@
     
     [XHLaunchAd setWaitDataDuration:2];
 
-    [YFNetworkRequest postWithSubUrl:@"https://www.baidu.com" parameters:nil sucess:^(NSURLSessionDataTask *task, id responseObject) {
+    [YFNetworkRequest postWithSubUrl:@"https://www.baidu.com" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
         // 使用默认配置初始化
         XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
