@@ -9,7 +9,7 @@
 #import "UIView+JinyuProgressHUD.h"
 #import "JinyuProgressHUD.h"
 
-#define kHUDMinWidth 100.0f
+#define kHUDMinWidth 60.0f
 #define kShowDuration 1.5f
 
 @implementation UIView (JinyuProgressHUD)

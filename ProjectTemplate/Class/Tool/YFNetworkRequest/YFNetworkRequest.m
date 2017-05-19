@@ -29,53 +29,53 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 
 #pragma mark - public
 #pragma mark GET
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeGET URLString:URLString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)getWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeGET subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeGET URLString:URLString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
 #pragma mark POST
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePOST URLString:URLString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePOST subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePOST URLString:URLString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
 #pragma mark PUT
-+ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)PUT:(NSString *)URLString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePUT URLString:URLString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)putWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)PUT:(NSString *)URLString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypePUT subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypePUT URLString:URLString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
 #pragma mark DELETE
-+ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)DELETE:(NSString *)URLString parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeDELETE URLString:URLString parameters:parameters cachePolicy:YFNetworkRequestReloadIgnoringLocalCacheData success:success failure:failure];
 }
 
-+ (NSURLSessionDataTask *)deleteWithSubUrl:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)DELETE:(NSString *)URLString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)requestCachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [self requestMethod:YFNetworkRequestTypeDELETE subUrlString:subUrlString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
+    return [self requestMethod:YFNetworkRequestTypeDELETE URLString:URLString parameters:parameters cachePolicy:requestCachePolicy success:success failure:failure];
 }
 
 // 上传视频/图片
-+ (NSURLSessionDataTask *)postWithSubUrl:(NSString *)subUrlString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData success:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return [[YFNetworkRequest sharedInstance] POST:subUrlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    return [[YFNetworkRequest sharedInstance] POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         for (int i = 0; i < imageDatas.count; i++) {
             
@@ -99,22 +99,21 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
             failure(task, error);
         }
     }];
-    
 }
 
 #pragma mark - private
-+ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type subUrlString:(NSString *)subUrlString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)cachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
++ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type URLString:(NSString *)URLString parameters:(id)parameters cachePolicy:(YFNetworkRequestCachePolicy)cachePolicy success:(SuccessBlock)success failure:(FailureBlock)failure {
     
     NSURLSessionDataTask *task;
     
-    NSString *cacheKey = subUrlString;
+    NSString *cacheKey = URLString;
     
     if (parameters) {
         
         if (! [NSJSONSerialization isValidJSONObject:parameters]) return task;//参数不是json类型
         NSData *data = [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil];
         NSString *paramStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        cacheKey = [subUrlString stringByAppendingString:paramStr];
+        cacheKey = [URLString stringByAppendingString:paramStr];
     }
     
     YYCache *cache = [[YYCache alloc] initWithName:YFNetworkRequestCache];
@@ -160,11 +159,11 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
         }
     }
     
-    task = [self requestMethod:type subUrlString:subUrlString parameters:parameters cache:cache cacheKey:cacheKey success:success failure:failure];
+    task = [self requestMethod:type URLString:URLString parameters:parameters cache:cache cacheKey:cacheKey success:success failure:failure];
     return task;
 }
 
-+ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type subUrlString:(NSString *)subUrlString parameters:(id)parameters cache:(YYCache *)cache cacheKey:(NSString *)cacheKey success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
++ (NSURLSessionDataTask *)requestMethod:(YFNetworkRequestType)type URLString:(NSString *)URLString parameters:(id)parameters cache:(YYCache *)cache cacheKey:(NSString *)cacheKey success:(void (^)(NSURLSessionDataTask *task, id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
     
     NSURLSessionDataTask *task;
     
@@ -172,7 +171,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
             
         case YFNetworkRequestTypeGET : {
             
-            task = [[YFNetworkRequest sharedInstance] GET:subUrlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            task = [[YFNetworkRequest sharedInstance] GET:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 if ([responseObject isKindOfClass:[NSData class]]) {
                     
@@ -189,7 +188,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
         }
         case YFNetworkRequestTypePOST : {
             
-            task = [[YFNetworkRequest sharedInstance] POST:subUrlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            task = [[YFNetworkRequest sharedInstance] POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 if ([responseObject isKindOfClass:[NSData class]]) {
                     
@@ -206,7 +205,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
         }
         case YFNetworkRequestTypePUT : {
             
-            task = [[YFNetworkRequest sharedInstance] PUT:subUrlString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            task = [[YFNetworkRequest sharedInstance] PUT:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 if ([responseObject isKindOfClass:[NSData class]]) {
                     
@@ -223,7 +222,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
         }
         case YFNetworkRequestTypeDELETE : {
             
-            task = [[YFNetworkRequest sharedInstance] DELETE:subUrlString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            task = [[YFNetworkRequest sharedInstance] DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 if ([responseObject isKindOfClass:[NSData class]]) {
                     
@@ -253,6 +252,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     dispatch_once(&onceToken, ^{
         
         manager = [YFNetworkRequest client];
+        
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         manager.requestSerializer.timeoutInterval = 30.0f;
         [manager.requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -266,7 +266,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 + (instancetype)client {
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    return [[YFNetworkRequest alloc] initWithBaseURL:[NSURL URLWithString:BASEURLSTRING] sessionConfiguration:configuration];
+    return [[YFNetworkRequest alloc] initWithBaseURL:[NSURL URLWithString:kBaseURLString] sessionConfiguration:configuration];
 }
 
 @end

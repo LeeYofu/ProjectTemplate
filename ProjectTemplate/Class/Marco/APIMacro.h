@@ -13,11 +13,11 @@
  *  本文件可放请求API 拼接的路径
  */
 
-// base url
-#define kBaseUrl @"https://goldfishspot.qdztrk.com"
+// base URL
+#define kBaseURL @"https://goldfishspot.qdztrk.com"
 
 // 登录
-#define kGetDayKUrl @"/goldfishfinance/quotation/echartData?bCode=SH0001&dType=DAY&count=500&quota=MA"
+#define kGetDayKURL @"/goldfishfinance/quotation/echartData"
 
 
 

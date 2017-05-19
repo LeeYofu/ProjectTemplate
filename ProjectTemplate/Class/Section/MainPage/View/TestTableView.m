@@ -32,8 +32,15 @@
         });
     });
     
-    
-    [YFNetworkRequest getWithSubUrl:kGetDayKUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    // test
+    // ?bCode=SH0001&dType=DAY&count=500&quota=MA
+    NSDictionary *parameters = @{
+                                 @"bCode" : @"SH0001",
+                                 @"dType" : @"DAY",
+                                 @"count" : @"500",
+                                 @"quota" : @"MA"
+                                 };
+    [YFNetworkRequest GET:kGetDayKURL parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSLog(@"responseObject = %@", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
