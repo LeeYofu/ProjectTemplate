@@ -21,7 +21,7 @@ pod 'FHHFPSIndicator'
 pod 'AvoidCrash'
 pod 'FDFullscreenPopGesture'
 pod 'DZNEmptyDataSet'
-
+pod 'Masonry'
 
 
 

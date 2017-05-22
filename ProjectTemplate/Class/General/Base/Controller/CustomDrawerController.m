@@ -21,7 +21,7 @@
 
 + (instancetype)drawerController {
     
-    [MMExampleDrawerVisualStateManager sharedManager].leftDrawerAnimationType = MMDrawerAnimationTypeSwingingDoor;
+    [MMExampleDrawerVisualStateManager sharedManager].leftDrawerAnimationType = MMDrawerAnimationTypeSlide;
     
     UserCenterViewController *userCenterVC = [UserCenterViewController new];
     CustomTabBarController *tabBarC = [CustomTabBarController new];

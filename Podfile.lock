@@ -32,6 +32,7 @@ PODS:
   - JSPatchPlatform/Core (1.6.6):
     - JSPatch
   - LEETheme (1.1.2)
+  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
@@ -74,6 +75,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - JSPatchPlatform
   - LEETheme
+  - Masonry
   - MBProgressHUD
   - MJExtension
   - MJRefresh
@@ -98,6 +100,7 @@ SPEC CHECKSUMS:
   JSPatch: 02cfed591cb907bbfe80a346666e5a35fc2d349d
   JSPatchPlatform: 8cc9aaebe21109d5fdfb4500384ddf38ed0990e9
   LEETheme: 53fc1d7611aa3bce92d24a62b7e3816dd599e332
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -111,6 +114,6 @@ SPEC CHECKSUMS:
   XHLaunchAd: 5526ebabff76a729feef9aacb13ba2af14aa5426
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 6740a51ae5fe2d35bb88503a620a011eb3bf3be6
+PODFILE CHECKSUM: 8827d74a3013681aa6be4dfa1f3631208aa79124
 
 COCOAPODS: 1.2.1
