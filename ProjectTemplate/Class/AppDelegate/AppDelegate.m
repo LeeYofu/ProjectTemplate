@@ -35,6 +35,7 @@
 //    [self setUpLaunchADView];
     [self setUpAvoidCrash];
     [self setUpLeeTheme];
+    [self showStatusBar];
 }
 
 #pragma mark - 设置textField、textView的光标颜色
@@ -110,6 +111,10 @@
     });
 }
 
+- (void)showStatusBar {
+    
+    [UIApplication sharedApplication].statusBarHidden = NO;
+}
 
 #pragma mark - Launched --------------------------------------
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

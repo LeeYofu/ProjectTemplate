@@ -20,6 +20,7 @@
     
     [super viewDidLoad];
     
+    [self test];
 }
 
 - (void)config {
@@ -51,6 +52,10 @@
     [self.view addSubview:pushButton];
 }
 
+- (void)test {
+    
+    
+}
 
 - (void)userCenterButtonDidClicked {
     

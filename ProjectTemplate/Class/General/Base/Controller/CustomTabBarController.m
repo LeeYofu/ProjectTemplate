@@ -66,7 +66,6 @@
     self.viewControllerNameArray = @[ @"MainPageViewController", @"BaseViewController", @"BaseViewController", @"BaseViewController" ];
     self.imageNameArray = @[ @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击" ];
     self.selectedImageNameArray = @[ @"首页-点击", @"首页-点击", @"首页-点击", @"首页-点击" ];
-
 }
 
 - (void)createChildViewController {
@@ -115,5 +114,7 @@
         self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeNone;
     }
 }
+
+
 
 @end

@@ -16,4 +16,7 @@
 // 清空NSUserDefaults存储的所有内容
 + (void)clearNSUserDefaults;
 
+// 获取苹果手机安装的所有APP
++ (NSArray *)getAllInstalledAPPFromIphoneDevice;
+
 @end
