@@ -13,6 +13,11 @@
 
 @interface CustomTabBarController () <CustomTabBarDelegate>
 
+@property (nonatomic, strong) NSArray *titleArray;
+@property (nonatomic, strong) NSArray *viewControllerNameArray;
+@property (nonatomic, strong) NSArray *imageNameArray;
+@property (nonatomic, strong) NSArray *selectedImageNameArray;
+
 @property (nonatomic, strong) NSMutableArray *itemsArray; // 盛放items模型的数组
 
 @end
@@ -46,21 +51,35 @@
     
     [super viewDidLoad];
     
-    MainPageViewController *mainPageVC1 = [MainPageViewController new];
-    [self addChildViewController:mainPageVC1 title:@"1" imageName:@"首页-未点击" selectedImageName:@"首页-点击"];
+    [self config];
     
-    MainPageViewController *mainPageVC2 = [MainPageViewController new];
-    [self addChildViewController:mainPageVC2 title:@"2" imageName:@"首页-未点击" selectedImageName:@"首页-点击"];
+    [self createChildViewController];
     
-    MainPageViewController *mainPageVC3 = [MainPageViewController new];
-    [self addChildViewController:mainPageVC3 title:@"3" imageName:@"首页-未点击" selectedImageName:@"首页-点击"];
-    
-    MainPageViewController *mainPageVC4 = [MainPageViewController new];
-    [self addChildViewController:mainPageVC4 title:@"4" imageName:@"首页-未点击" selectedImageName:@"首页-点击"];
-    
-    MainPageViewController *mainPageVC5 = [MainPageViewController new];
-    [self addChildViewController:mainPageVC5 title:@"5" imageName:@"首页-未点击" selectedImageName:@"首页-点击"];
+    [self createCustomTabbar];
 
+    
+}
+
+- (void)config {
+    
+    self.titleArray = @[ @"首页", @"行情", @"资讯", @"直播" ];
+    self.viewControllerNameArray = @[ @"MainPageViewController", @"BaseViewController", @"BaseViewController", @"BaseViewController" ];
+    self.imageNameArray = @[ @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击" ];
+    self.selectedImageNameArray = @[ @"首页-点击", @"首页-点击", @"首页-点击", @"首页-点击" ];
+
+}
+
+- (void)createChildViewController {
+    
+    for (int i = 0; i < self.viewControllerNameArray.count; i ++) {
+        
+        BaseViewController *VC = [NSClassFromString(self.viewControllerNameArray[i]) new];
+        [self addChildViewController:VC title:self.titleArray[i] imageName:self.imageNameArray[i] selectedImageName:self.selectedImageNameArray[i]];
+    }
+}
+
+- (void)createCustomTabbar {
+    
     // 添加自定义tabBar
     CustomTabBar *tabBar = [[CustomTabBar alloc] initWithFrame:self.tabBar.bounds];
     tabBar.backgroundColor = kWhiteColor;
@@ -85,6 +104,16 @@
 - (void)tabBarDidClickedAtIndex:(NSInteger)index {
     
     self.selectedIndex = index;
+    
+    if (self.selectedIndex == 0) {  // 只有首页才有抽屉效果
+        
+        self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+        self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+    } else {
+        
+        self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
+        self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeNone;
+    }
 }
 
 @end

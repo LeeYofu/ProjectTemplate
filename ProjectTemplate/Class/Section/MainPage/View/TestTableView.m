@@ -42,7 +42,7 @@
                                  };
     [YFNetworkRequest GET:kGetDayKURL parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        NSLog(@"responseObject = %@", responseObject);
+//        NSLog(@"responseObject = %@", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         NSLog(@"error = %@", error);

@@ -12,4 +12,7 @@
 
 + (UIImage *)imageWithColor:(UIColor *)color;
 
+// 获取图像某一像素点的颜色
+- (UIColor *)colorAtPixel:(CGPoint)point;
+
 @end

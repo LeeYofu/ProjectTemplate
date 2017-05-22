@@ -22,6 +22,11 @@
     
 }
 
+- (void)config {
+    
+    [super config];
+}
+
 - (void)createSubviews {
     
     [super createSubviews];
@@ -54,8 +59,13 @@
 
 - (void)pushButtonDidClicked {
     
-    MainPageViewController *testVC = [MainPageViewController new];
+    BaseViewController *testVC = [BaseViewController new];
     [self.navigationController pushViewController:testVC animated:YES];
+    
+//    CustomNavigationController *naviC = [[CustomNavigationController alloc] initWithRootViewController:testVC];
+//    [self presentViewController:naviC animated:YES completion:^{
+//        
+//    }];
 }
 
 @end

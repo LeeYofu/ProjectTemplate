@@ -13,4 +13,7 @@
 // 获取设备UDID
 + (NSString *)getDeviceUDID;
 
+// 清空NSUserDefaults存储的所有内容
++ (void)clearNSUserDefaults;
+
 @end
