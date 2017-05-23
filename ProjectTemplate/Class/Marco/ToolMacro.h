@@ -62,7 +62,7 @@ return shared##className; \
 #define kKeyWindow          [UIApplication sharedApplication].keyWindow
 #define kAppDelegate        [UIApplication sharedApplication].delegate
 #define kUserDefaults       [NSUserDefaults standardUserDefaults]
-#define kNotificationCenter [NSNotificationCenter defaultCenter
+#define kNotificationCenter [NSNotificationCenter defaultCenter]
 
 // 由角度转换弧度
 #define kDegreesToRadian(x)      (M_PI * (x) / 180.0)

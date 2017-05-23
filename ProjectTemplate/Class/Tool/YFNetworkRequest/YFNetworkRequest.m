@@ -22,6 +22,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
 
 @interface YFNetworkRequest()
 
+@property (nonatomic, strong) Reachability *reachability;
 
 @end
 
@@ -268,5 +269,37 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     return [[YFNetworkRequest alloc] initWithBaseURL:[NSURL URLWithString:kBaseURLString] sessionConfiguration:configuration];
 }
+
+#pragma mark - 监测网络状态相关
+- (Reachability *)reachability {
+    
+    if (_reachability == nil) {
+        
+        [kNotificationCenter addObserver:self selector:@selector(networkStatusDidChanged:) name:kReachabilityChangedNotification object:nil];
+        
+        _reachability = [Reachability reachabilityForInternetConnection];
+        [_reachability startNotifier];
+    }
+    return _reachability;
+}
+
++ (NetworkStatus)getCurrentNetworkStatus {
+    
+    NetworkStatus networkStatus = [[YFNetworkRequest sharedInstance].reachability currentReachabilityStatus];
+    
+    return networkStatus;
+}
+
+- (void)networkStatusDidChanged:(NSNotification *)notification {
+    
+    [kNotificationCenter postNotificationName:kNetworkStatusDidChangedNotification object:@([self.reachability currentReachabilityStatus])];
+}
+
+#pragma mark - dealloc
+- (void)dealloc {
+    
+    [kNotificationCenter removeObserver:self];
+}
+
 
 @end

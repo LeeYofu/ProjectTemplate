@@ -23,6 +23,7 @@
 		239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */; };
 		2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */; };
 		23BFE3C01EC97ECD00ECF5FE /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BFE3BF1EC97ECD00ECF5FE /* UserCenterViewController.m */; };
+		23C52E961ED42A7F00D45ECE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C52E951ED42A7F00D45ECE /* Reachability.m */; };
 		23D858B01ECD4C6C001007E0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858911ECD4C6C001007E0 /* BaseViewController.m */; };
 		23D858B11ECD4C6C001007E0 /* CustomDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858931ECD4C6C001007E0 /* CustomDrawerController.m */; };
 		23D858B21ECD4C6C001007E0 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858951ECD4C6C001007E0 /* CustomNavigationController.m */; };
@@ -108,6 +109,8 @@
 		2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 		23BFE3BE1EC97ECD00ECF5FE /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		23BFE3BF1EC97ECD00ECF5FE /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		23C52E941ED42A7F00D45ECE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		23C52E951ED42A7F00D45ECE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		23D858901ECD4C6C001007E0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		23D858911ECD4C6C001007E0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		23D858921ECD4C6C001007E0 /* CustomDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDrawerController.h; sourceTree = "<group>"; };
@@ -365,6 +368,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		23C52E931ED42A7F00D45ECE /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				23C52E941ED42A7F00D45ECE /* Reachability.h */,
+				23C52E951ED42A7F00D45ECE /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		23D8588F1ECD4C6C001007E0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +617,7 @@
 		23FA7D051E52E91C005F5A17 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				23C52E931ED42A7F00D45ECE /* Reachability */,
 				231EA7AB1ECA910B00321974 /* MMExampleDrawerVisualStateManager */,
 			);
 			path = Vendor;
@@ -937,6 +950,7 @@
 				237CA1631E568F4300182FE2 /* APPTool.m in Sources */,
 				23D858BE1ECD4C6C001007E0 /* BaseView.m in Sources */,
 				23D858B41ECD4C6C001007E0 /* BaseModel.m in Sources */,
+				23C52E961ED42A7F00D45ECE /* Reachability.m in Sources */,
 				23D858B81ECD4C6C001007E0 /* BaseImageView.m in Sources */,
 				23D858B71ECD4C6C001007E0 /* BaseCollectionViewCell.m in Sources */,
 				23BFE3C01EC97ECD00ECF5FE /* UserCenterViewController.m in Sources */,
