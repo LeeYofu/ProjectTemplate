@@ -276,7 +276,7 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     if (_reachability == nil) {
         
         [kNotificationCenter addObserver:self selector:@selector(networkStatusDidChanged:) name:kReachabilityChangedNotification object:nil];
-        
+
         _reachability = [Reachability reachabilityForInternetConnection];
         [_reachability startNotifier];
     }
@@ -300,6 +300,5 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     
     [kNotificationCenter removeObserver:self];
 }
-
 
 @end

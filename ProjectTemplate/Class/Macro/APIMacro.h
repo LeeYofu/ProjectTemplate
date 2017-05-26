@@ -16,7 +16,7 @@
 // base URL
 #define kBaseURL @"https://goldfishspot.qdztrk.com"
 
-// 日K
+// 
 #define kGetDayKURL @"/goldfishfinance/quotation/echartData"
 
 

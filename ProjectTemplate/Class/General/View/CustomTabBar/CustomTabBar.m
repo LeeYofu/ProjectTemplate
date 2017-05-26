@@ -77,6 +77,11 @@
         // 把自定义 按钮 添加到 自定义按钮数组
         [self.buttonsArray addObject:tabBarButton];
     }
+    
+    // 分割线
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, kSeparatorLineHeight)];
+    lineView.backgroundColor = kCustomRGBColor(222, 222, 222, 1.0);
+    [self addSubview:lineView];
 }
 
 #pragma mark - 自定义按钮被点击
@@ -91,32 +96,32 @@
     }
     
     // 动画
-    if ([self.seletedButton isEqual:tabBarButton]) {
-        return;
-    }
-    [UIView animateWithDuration:0.3f animations:^{
-        self.seletedButton.imageView.transform = CGAffineTransformIdentity;
-    }];
-    UIImageView *icon = tabBarButton.imageView;
-    {
-        UIViewAnimationOptions op = UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveEaseInOut;
-        NSTimeInterval one = 0.18;
-        [UIView animateWithDuration:one delay:0 options:op animations:^{
-            icon.transform = CGAffineTransformMakeScale(1.3, 1.3);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:one delay:0 options:op animations:^{
-                icon.transform = CGAffineTransformMakeScale(1.0, 1.0);
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:one delay:0 options:op animations:^{
-                    icon.transform = CGAffineTransformMakeScale(1.13, 1.13);
-                } completion:^(BOOL finished) {
-                    [UIView animateWithDuration:one delay:0 options:op animations:^{
-                        icon.transform = CGAffineTransformMakeScale(1.1, 1.1);
-                    } completion:NULL];
-                }];
-            }];
-        }];
-    }
+//    if ([self.seletedButton isEqual:tabBarButton]) {
+//        return;
+//    }
+//    [UIView animateWithDuration:0.3f animations:^{
+//        self.seletedButton.imageView.transform = CGAffineTransformIdentity;
+//    }];
+//    UIImageView *icon = tabBarButton.imageView;
+//    {
+//        UIViewAnimationOptions op = UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveEaseInOut;
+//        NSTimeInterval one = 0.18;
+//        [UIView animateWithDuration:one delay:0 options:op animations:^{
+//            icon.transform = CGAffineTransformMakeScale(1.3, 1.3);
+//        } completion:^(BOOL finished) {
+//            [UIView animateWithDuration:one delay:0 options:op animations:^{
+//                icon.transform = CGAffineTransformMakeScale(1.0, 1.0);
+//            } completion:^(BOOL finished) {
+//                [UIView animateWithDuration:one delay:0 options:op animations:^{
+//                    icon.transform = CGAffineTransformMakeScale(1.13, 1.13);
+//                } completion:^(BOOL finished) {
+//                    [UIView animateWithDuration:one delay:0 options:op animations:^{
+//                        icon.transform = CGAffineTransformMakeScale(1.1, 1.1);
+//                    } completion:NULL];
+//                }];
+//            }];
+//        }];
+//    }
     
     self.seletedButton = tabBarButton; // 记住上一个被选中的按钮
 }

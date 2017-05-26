@@ -21,8 +21,8 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = kThemeColor;
-        self.lee_theme.LeeAddBackgroundColor(@"orange", kThemeColor).LeeAddBackgroundColor(@"red", kRedColor);
+        self.backgroundColor = kWhiteColor;
+        self.lee_theme.LeeAddBackgroundColor(@"orange", kWhiteColor).LeeAddBackgroundColor(@"red", kWhiteColor);
         
         [self createSubviews];
     }
@@ -37,11 +37,10 @@
     CGFloat topPadding = 20;
     self.titleLabel.frame = CGRectMake(left_rightPadding, topPadding, self.width - 2 * left_rightPadding, kNavigationBarHeight - topPadding);
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.titleLabel.textColor = kWhiteColor;
+    self.titleLabel.textColor = kBlackColor;
     self.titleLabel.font = kFont_18;
     [self addSubview:self.titleLabel];
     
-    // backbutton
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.backButton.frame = CGRectMake(5, topPadding, 16, kNavigationBarHeight - topPadding);
     [self.backButton addTarget:self action:@selector(backButtonDidClicked) forControlEvents:UIControlEventTouchUpInside];
@@ -50,6 +49,10 @@
     self.backButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.backButton.hidden = YES;
     [self addSubview:self.backButton];
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - kSeparatorLineHeight, self.width, kSeparatorLineHeight)];
+    lineView.backgroundColor = kCustomRGBColor(208, 208, 208, 1.0);
+    [self addSubview:lineView];
 }
 
 - (void)backButtonDidClicked {

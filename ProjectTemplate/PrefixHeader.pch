@@ -32,7 +32,7 @@
 #import "UIImage+Category.h"
 #import "UIView+JinyuProgressHUD.h"
 #import "CustomNavigationController.h"
-#import <Masonry.h>
+
 
 
 #endif /* PrefixHeader_pch */

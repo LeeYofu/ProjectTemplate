@@ -9,7 +9,7 @@
 #import "CustomTabBarController.h"
 #import "CustomNavigationController.h"
 #import "CustomTabBar.h"
-#import "MainPageViewController.h"
+#import "BaseViewController.h"
 
 @interface CustomTabBarController () <CustomTabBarDelegate>
 
@@ -62,8 +62,8 @@
 
 - (void)config {
     
-    self.titleArray = @[ @"首页", @"行情", @"资讯", @"直播" ];
-    self.viewControllerNameArray = @[ @"MainPageViewController", @"BaseViewController", @"BaseViewController", @"BaseViewController" ];
+    self.titleArray = @[ @"首页", @"行情", @"直播", @"策略" ];
+    self.viewControllerNameArray = @[ @"HomePageViewController", @"MarketQuotationViewController", @"LiveViewController", @"TacticsViewController" ];
     self.imageNameArray = @[ @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击" ];
     self.selectedImageNameArray = @[ @"首页-点击", @"首页-点击", @"首页-点击", @"首页-点击" ];
 }
@@ -86,6 +86,10 @@
     // 盛放 item模型的数组赋值
     tabBar.itemsArray = self.itemsArray;
     [self.tabBar addSubview:tabBar];
+    
+    // 隐藏分割线
+    self.tabBar.clipsToBounds = YES;
+
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {

@@ -23,6 +23,7 @@
         _cNavigationBar = [[CustomNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.width, kNavigationBarHeight)];
         _cNavigationBar.delegate = self;
         _cNavigationBar.backButtonHidden = self.navigationController.viewControllers.count <= 1;
+        _cNavigationBar.title = self.title;
         [self.view addSubview:_cNavigationBar];
     }
     return _cNavigationBar;
@@ -34,7 +35,7 @@
     [super viewWillAppear:animated];
     
     // 默认设置状态栏颜色
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

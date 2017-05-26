@@ -11,7 +11,7 @@
 
 #pragma mark - 颜色
 /* 颜色 */
-#define kThemeColor kCustom0xColor(0xee7834, 1.0f) // 主题色
+#define kThemeColor kCustomRGBColor(71, 145, 244, 1.0) // 主题色
 #define kLineViewColor kColor0xded6de // 分割线颜色
 #define kBackgroundColor kColor0xeff0f4 // 背景色
 
@@ -63,6 +63,6 @@
 
 
 #pragma mark - Frame
-#define kLineViewHeight 0.5f
+#define kSeparatorLineHeight (1 / [UIScreen mainScreen].scale)
 
 #endif /* UIMarco_h */
