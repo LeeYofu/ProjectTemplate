@@ -10,4 +10,7 @@
 
 @interface YFDayCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) UILabel *dayLabel;
+@property (nonatomic, strong) UIView *todayView;
+
 @end

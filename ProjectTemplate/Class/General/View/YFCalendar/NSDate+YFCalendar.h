@@ -15,4 +15,7 @@
 - (NSInteger)getDay;
 - (NSInteger)getMonth;
 - (NSInteger)getYear;
+- (NSInteger)totalDaysInMonth;
+- (NSInteger)firstWeekDayInMonth;
+
 @end
