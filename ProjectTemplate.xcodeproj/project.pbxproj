@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230951A81ED9475000100190 /* YFCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 230951A71ED9475000100190 /* YFCalendarView.m */; };
+		230951AE1ED9561900100190 /* YFMonthCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 230951AD1ED9561900100190 /* YFMonthCollectionViewCell.m */; };
+		230951B41ED96D3C00100190 /* NSDate+YFCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 230951B31ED96D3C00100190 /* NSDate+YFCalendar.m */; };
+		230951B71ED9732400100190 /* YFDayCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 230951B61ED9732400100190 /* YFDayCollectionViewCell.m */; };
+		23142C341ED81D9300CF2EBE /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23142C331ED81D9300CF2EBE /* BannerView.m */; };
+		23142C371ED81FF500CF2EBE /* BannerViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23142C361ED81FF500CF2EBE /* BannerViewCollectionViewCell.m */; };
 		231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */; };
 		231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7B61ECAF99400321974 /* UIImage+Category.m */; };
 		234820B31ED412A2000D6620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 234820B21ED412A2000D6620 /* Reachability.m */; };
@@ -84,6 +90,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		230951A61ED9475000100190 /* YFCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCalendarView.h; sourceTree = "<group>"; };
+		230951A71ED9475000100190 /* YFCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCalendarView.m; sourceTree = "<group>"; };
+		230951AC1ED9561900100190 /* YFMonthCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMonthCollectionViewCell.h; sourceTree = "<group>"; };
+		230951AD1ED9561900100190 /* YFMonthCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMonthCollectionViewCell.m; sourceTree = "<group>"; };
+		230951B21ED96D3C00100190 /* NSDate+YFCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YFCalendar.h"; sourceTree = "<group>"; };
+		230951B31ED96D3C00100190 /* NSDate+YFCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YFCalendar.m"; sourceTree = "<group>"; };
+		230951B51ED9732400100190 /* YFDayCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFDayCollectionViewCell.h; sourceTree = "<group>"; };
+		230951B61ED9732400100190 /* YFDayCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFDayCollectionViewCell.m; sourceTree = "<group>"; };
+		23142C321ED81D9300CF2EBE /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		23142C331ED81D9300CF2EBE /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		23142C351ED81FF500CF2EBE /* BannerViewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewCollectionViewCell.h; sourceTree = "<group>"; };
+		23142C361ED81FF500CF2EBE /* BannerViewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewCollectionViewCell.m; sourceTree = "<group>"; };
 		231EA7AC1ECA910B00321974 /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
 		231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		231EA7B51ECAF99400321974 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
@@ -231,6 +249,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230951A51ED9471900100190 /* YFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				230951A61ED9475000100190 /* YFCalendarView.h */,
+				230951A71ED9475000100190 /* YFCalendarView.m */,
+				230951AC1ED9561900100190 /* YFMonthCollectionViewCell.h */,
+				230951AD1ED9561900100190 /* YFMonthCollectionViewCell.m */,
+				230951B51ED9732400100190 /* YFDayCollectionViewCell.h */,
+				230951B61ED9732400100190 /* YFDayCollectionViewCell.m */,
+				230951B21ED96D3C00100190 /* NSDate+YFCalendar.h */,
+				230951B31ED96D3C00100190 /* NSDate+YFCalendar.m */,
+			);
+			path = YFCalendar;
+			sourceTree = "<group>";
+		};
+		23142C311ED81D7600CF2EBE /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				23142C321ED81D9300CF2EBE /* BannerView.h */,
+				23142C331ED81D9300CF2EBE /* BannerView.m */,
+				23142C351ED81FF500CF2EBE /* BannerViewCollectionViewCell.h */,
+				23142C361ED81FF500CF2EBE /* BannerViewCollectionViewCell.m */,
+			);
+			path = BannerView;
+			sourceTree = "<group>";
+		};
 		231EA7AB1ECA910B00321974 /* MMExampleDrawerVisualStateManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -801,6 +845,8 @@
 		23FA7D011E52E91C005F5A17 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				230951A51ED9471900100190 /* YFCalendar */,
+				23142C311ED81D7600CF2EBE /* BannerView */,
 				23EC4B831ED680E500747C93 /* YFSegmentedControl */,
 				23DE66EF1ECBE57800580812 /* HUD */,
 				2357CE691E5FF0F300629D2D /* LineView */,
@@ -1151,11 +1197,13 @@
 				23FA7D511E52FE93005F5A17 /* GTMBase64.m in Sources */,
 				23D858B21ECD4C6C001007E0 /* CustomNavigationController.m in Sources */,
 				23EC4B5B1ED66F8900747C93 /* LiveViewController.m in Sources */,
+				230951A81ED9475000100190 /* YFCalendarView.m in Sources */,
 				23FA7D551E52FE93005F5A17 /* YFSecurityUtil.m in Sources */,
 				239508361E5D799B00F7BC7D /* NSString+Category.m in Sources */,
 				23D858B31ECD4C6C001007E0 /* CustomTabBarController.m in Sources */,
 				23FA7D401E52F211005F5A17 /* CustomTabBarBadgeView.m in Sources */,
 				23D858BB1ECD4C6C001007E0 /* BaseTableView.m in Sources */,
+				230951B41ED96D3C00100190 /* NSDate+YFCalendar.m in Sources */,
 				23EC4B581ED66F7F00747C93 /* MarketQuotationViewController.m in Sources */,
 				23FA7D5B1E52FEAB005F5A17 /* NSJSONSerialization+YFJson.m in Sources */,
 				234CDA531E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m in Sources */,
@@ -1174,9 +1222,11 @@
 				237CA1631E568F4300182FE2 /* APPTool.m in Sources */,
 				23D858BE1ECD4C6C001007E0 /* BaseView.m in Sources */,
 				23D858B41ECD4C6C001007E0 /* BaseModel.m in Sources */,
+				230951B71ED9732400100190 /* YFDayCollectionViewCell.m in Sources */,
 				234820B31ED412A2000D6620 /* Reachability.m in Sources */,
 				23D858B81ECD4C6C001007E0 /* BaseImageView.m in Sources */,
 				23D858B71ECD4C6C001007E0 /* BaseCollectionViewCell.m in Sources */,
+				23142C371ED81FF500CF2EBE /* BannerViewCollectionViewCell.m in Sources */,
 				23D858B01ECD4C6C001007E0 /* BaseViewController.m in Sources */,
 				239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */,
 				23EC4B551ED66EB800747C93 /* HomePageViewController.m in Sources */,
@@ -1184,8 +1234,10 @@
 				23EC4B5E1ED66F9400747C93 /* TacticsViewController.m in Sources */,
 				23EC4B3A1ED66DDA00747C93 /* UserCenterViewController.m in Sources */,
 				231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */,
+				230951AE1ED9561900100190 /* YFMonthCollectionViewCell.m in Sources */,
 				2357CE6C1E5FF0FB00629D2D /* LineView.m in Sources */,
 				23FA7D531E52FE93005F5A17 /* NSString+YFDES.m in Sources */,
+				23142C341ED81D9300CF2EBE /* BannerView.m in Sources */,
 				23FA7D3A1E52F1E4005F5A17 /* CustomTabBar.m in Sources */,
 				23FA7D541E52FE93005F5A17 /* NSString+YFMD5_Sha.m in Sources */,
 				23D858B51ECD4C6C001007E0 /* BaseButton.m in Sources */,
