@@ -7,119 +7,20 @@
 //
 
 #import "AppDelegate.h"
-#import <UMMobClick/MobClick.h>
-#import <JSPatchPlatform/JSPatch.h>
-#import "AppDelegate+LaunchAD.h"
+#import "AppDelegate+AppService.h"
 #import "CustomDrawerController.h"
-#import <AvoidCrash.h>
 
 @interface AppDelegate ()
-
 
 @end
 
 @implementation AppDelegate
 
-- (void)dealloc {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark - config ------------------------------------------
-- (void)configWithApplication:(UIApplication *)application launchOptions:(NSDictionary *)launchOptions {
-    
-    [self setUpTextFieldTextViewColor];
-    [self setUpIQKeyboardManager];
-    [self setUpMobClick];
-//    [self setUpJSPatch];
-//    [self setUpLaunchADView];
-    [self setUpAvoidCrash];
-    [self setUpLeeTheme];
-    [self showStatusBar];
-}
-
-#pragma mark - 设置textField、textView的光标颜色
-- (void)setUpTextFieldTextViewColor {
-    
-    [[UITextField appearance] setTintColor:kThemeColor];
-    [[UITextView appearance] setTintColor:kThemeColor];
-}
-
-#pragma mark - IQKeyboardManager
-- (void)setUpIQKeyboardManager {
-    
-    // IQKeyboardManager
-    [IQKeyboardManager sharedManager].toolbarManageBehaviour = IQAutoToolbarBySubviews;
-    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
-    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
-    [IQKeyboardManager sharedManager].shouldToolbarUsesTextFieldTintColor = YES;
-    [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = NO;
-    [IQKeyboardManager sharedManager].shouldPlayInputClicks = YES;
-}
-
-#pragma mark - 友盟统计
-- (void)setUpMobClick {
-    
-    [MobClick setAppVersion:XcodeAppVersion]; // 参数为NSString * 类型,自定义app版本信息，如果不设置，默认从CFBundleVersion里取
-    UMConfigInstance.appKey = kMobClickKey;
-    
-    [MobClick startWithConfigure:UMConfigInstance];
-    [MobClick setLogEnabled:kIsDebug];
-}
-
-#pragma mark - js热修复
-- (void)setUpJSPatch {
-    
-    [JSPatch startWithAppKey:kJSPatchKey];
-    [JSPatch sync];
-    
-//    [JSPatch testScriptInBundle]; // 用于本地文件测试
-}
-
-#pragma mark - 加载启动广告页面
-- (void)setUpLaunchADView {
-    
-    [self setupLaunchAD];
-}
-
-#pragma mark - avoid carsh
-- (void)setUpAvoidCrash {
-    
-    if (kIsDebug == NO) {
-        
-        [AvoidCrash becomeEffective];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
-    }
-}
-
-- (void)dealwithCrashMessage:(NSNotification *)note {
-    
-    // 注意:所有的信息都在userInfo中
-    // 你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
-    NSLog(@"%@",note.userInfo);
-}
-
-#pragma mark - 主题
-- (void)setUpLeeTheme {
-    
-    // 设置默认主题
-    [LEETheme defaultTheme:@"red"];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [LEETheme startTheme:@"orange"];
-    });
-}
-
-- (void)showStatusBar {
-    
-    [UIApplication sharedApplication].statusBarHidden = NO;
-}
 
 #pragma mark - Launched --------------------------------------
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self configWithApplication:application launchOptions:launchOptions];
+    [self config];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

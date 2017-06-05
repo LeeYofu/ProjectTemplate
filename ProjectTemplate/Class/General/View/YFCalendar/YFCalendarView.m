@@ -109,27 +109,51 @@
 
 - (void)createSubviews {
     
+    // 底部遮罩
     self.maskView = [[UIView alloc] initWithFrame:self.bounds];
     self.maskView.backgroundColor = kBlackColor;
     self.maskView.alpha = 0.0f;
     [self addSubview:self.maskView];
     
+    // 顶部主视图/背景
     self.mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 0)];
     self.mainView.clipsToBounds = YES;
     [self addSubview:self.mainView];
     
+    // 日期选择器
     self.dateView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.dateViewHeight)];
     self.dateView.backgroundColor = kThemeColor;
     [self.mainView addSubview:self.dateView];
     
+    // 周指示器
     self.weekView = [[UIView alloc] initWithFrame:CGRectMake(0, self.dateView.maxY, self.width, self.weekViewHeight)];
-    self.weekView.backgroundColor = kBlueColor;
+    self.weekView.backgroundColor = kThemeColor;
     [self.mainView addSubview:self.weekView];
     
+    CGFloat weekLabelWidth = self.weekView.width / 7;
+    NSArray *weekTitleArray = @[
+                                @"日",
+                                @"一",
+                                @"二",
+                                @"三",
+                                @"四",
+                                @"五",
+                                @"六"
+                                ];
+    for (int i = 0; i < 7; i ++) {
+        
+        UILabel *weekLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * weekLabelWidth, 0, weekLabelWidth, self.weekView.height)];
+        weekLabel.textAlignment = NSTextAlignmentCenter;
+        weekLabel.font = kFont_13;
+        weekLabel.textColor = kWhiteColor;
+        weekLabel.text = weekTitleArray[i];
+        [self.weekView addSubview:weekLabel];
+    }
+    
+    // 月/日选择器
     self.monthView = [[UIView alloc] initWithFrame:CGRectMake(0, self.weekView.maxY, self.width, self.monthViewHeight)];
     self.monthView.backgroundColor = kYellowColor;
     [self.mainView addSubview:self.monthView];
-    
 
     self.monthCollectionFlowLayout = [UICollectionViewFlowLayout new];
     self.monthCollectionFlowLayout.itemSize = CGSizeMake(self.monthView.width, self.monthView.height);

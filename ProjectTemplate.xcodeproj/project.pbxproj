@@ -16,7 +16,6 @@
 		231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */; };
 		231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7B61ECAF99400321974 /* UIImage+Category.m */; };
 		234820B31ED412A2000D6620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 234820B21ED412A2000D6620 /* Reachability.m */; };
-		234CDA531E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */; };
 		2357CE5A1E5FDA5500629D2D /* IMG_1485.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE571E5FDA5500629D2D /* IMG_1485.JPG */; };
 		2357CE5B1E5FDA5500629D2D /* IMG_1486.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE581E5FDA5500629D2D /* IMG_1486.JPG */; };
 		2357CE5C1E5FDA5500629D2D /* IMG_1487.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE591E5FDA5500629D2D /* IMG_1487.JPG */; };
@@ -27,6 +26,7 @@
 		239508361E5D799B00F7BC7D /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508341E5D799B00F7BC7D /* NSString+Category.m */; };
 		239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */; };
 		2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */; };
+		23C141381EE52C6F0071209E /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C141371EE52C6F0071209E /* AppDelegate+AppService.m */; };
 		23D858B01ECD4C6C001007E0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858911ECD4C6C001007E0 /* BaseViewController.m */; };
 		23D858B11ECD4C6C001007E0 /* CustomDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858931ECD4C6C001007E0 /* CustomDrawerController.m */; };
 		23D858B21ECD4C6C001007E0 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858951ECD4C6C001007E0 /* CustomNavigationController.m */; };
@@ -108,8 +108,6 @@
 		231EA7B61ECAF99400321974 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		234820B11ED412A2000D6620 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		234820B21ED412A2000D6620 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		234CDA511E5E91F700E2D9A4 /* AppDelegate+LaunchAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LaunchAD.h"; sourceTree = "<group>"; };
-		234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LaunchAD.m"; sourceTree = "<group>"; };
 		2357CE571E5FDA5500629D2D /* IMG_1485.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1485.JPG; sourceTree = "<group>"; };
 		2357CE581E5FDA5500629D2D /* IMG_1486.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1486.JPG; sourceTree = "<group>"; };
 		2357CE591E5FDA5500629D2D /* IMG_1487.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1487.JPG; sourceTree = "<group>"; };
@@ -132,6 +130,8 @@
 		23B6A2461ED517EE001F768D /* NotificationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationMacro.h; sourceTree = "<group>"; };
 		23B6A2471ED517EE001F768D /* ToolMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMacro.h; sourceTree = "<group>"; };
 		23B6A2481ED517EE001F768D /* UIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMacro.h; sourceTree = "<group>"; };
+		23C141361EE52C6F0071209E /* AppDelegate+AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
+		23C141371EE52C6F0071209E /* AppDelegate+AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
 		23D858901ECD4C6C001007E0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		23D858911ECD4C6C001007E0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		23D858921ECD4C6C001007E0 /* CustomDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDrawerController.h; sourceTree = "<group>"; };
@@ -799,8 +799,8 @@
 			children = (
 				23FA7CFB1E52E91C005F5A17 /* AppDelegate.h */,
 				23FA7CFC1E52E91C005F5A17 /* AppDelegate.m */,
-				234CDA511E5E91F700E2D9A4 /* AppDelegate+LaunchAD.h */,
-				234CDA521E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m */,
+				23C141361EE52C6F0071209E /* AppDelegate+AppService.h */,
+				23C141371EE52C6F0071209E /* AppDelegate+AppService.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1206,7 +1206,6 @@
 				230951B41ED96D3C00100190 /* NSDate+YFCalendar.m in Sources */,
 				23EC4B581ED66F7F00747C93 /* MarketQuotationViewController.m in Sources */,
 				23FA7D5B1E52FEAB005F5A17 /* NSJSONSerialization+YFJson.m in Sources */,
-				234CDA531E5E91F700E2D9A4 /* AppDelegate+LaunchAD.m in Sources */,
 				23EC4B861ED6810100747C93 /* YFSegmentedControl.m in Sources */,
 				23D858B61ECD4C6C001007E0 /* BaseCollectionView.m in Sources */,
 				23D858BD1ECD4C6C001007E0 /* BaseTextField.m in Sources */,
@@ -1236,6 +1235,7 @@
 				231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */,
 				230951AE1ED9561900100190 /* YFMonthCollectionViewCell.m in Sources */,
 				2357CE6C1E5FF0FB00629D2D /* LineView.m in Sources */,
+				23C141381EE52C6F0071209E /* AppDelegate+AppService.m in Sources */,
 				23FA7D531E52FE93005F5A17 /* NSString+YFDES.m in Sources */,
 				23142C341ED81D9300CF2EBE /* BannerView.m in Sources */,
 				23FA7D3A1E52F1E4005F5A17 /* CustomTabBar.m in Sources */,
