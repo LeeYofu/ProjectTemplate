@@ -13,6 +13,7 @@
 
 @implementation AppDelegate (AppService)
 
+#pragma mark - 配置所有
 - (void)config {
     
     [self configNotification];
@@ -24,17 +25,20 @@
     [self configStatusBarHiddenWhenLaunch];
 }
 
+#pragma mark - 推送通知
 - (void)configNotification {
     
     
 }
 
+#pragma mark - textField、textView光标颜色
 - (void)configTextFieldTextViewTintColor {
     
     [[UITextField appearance] setTintColor:kThemeColor];
     [[UITextView appearance] setTintColor:kThemeColor];
 }
 
+#pragma mark - IQKeyboardManager
 - (void)configIQKeyboardManager {
     
     [IQKeyboardManager sharedManager].toolbarManageBehaviour = IQAutoToolbarBySubviews;
@@ -45,6 +49,7 @@
     [IQKeyboardManager sharedManager].shouldPlayInputClicks = YES;
 }
 
+#pragma mark - 友盟统计
 - (void)configMobClick {
     
     [MobClick setAppVersion:XcodeAppVersion]; // 参数为NSString * 类型,自定义app版本信息，如果不设置，默认从CFBundleVersion里取
@@ -54,6 +59,7 @@
     [MobClick setLogEnabled:kIsDebug];
 }
 
+#pragma mark - 启动广告
 - (void)configLaunchAdvertisementView {
     
     [XHLaunchAd setWaitDataDuration:2];
@@ -70,6 +76,7 @@
     
 }
 
+#pragma mark - 避免崩溃
 - (void)configAvoidCrash {
     
     if (kIsDebug == NO) {
@@ -79,11 +86,13 @@
     }
 }
 
+#pragma mark - 程序启动隐藏状态栏
 - (void)configStatusBarHiddenWhenLaunch {
     
     [UIApplication sharedApplication].statusBarHidden = NO;
 }
 
+#pragma mark - Other
 - (void)dealwithCrashMessage:(NSNotification *)note {
     
     // 注意:所有的信息都在userInfo中
