@@ -17,7 +17,6 @@
 @implementation AppDelegate
 
 
-#pragma mark - Launched --------------------------------------
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self config];

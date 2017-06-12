@@ -69,4 +69,31 @@ return shared##className; \
 // 由弧度转换角度
 #define kRadianToDegrees(radian) (radian * 180.0) / (M_PI)
 
+//View圆角和加边框
+#define kViewBorderRadius(View,Radius,Width,Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+// View圆角
+#define kViewRadius(View,Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+// property属性快速声明
+#define kPropertyString(s)  @property(nonatomic,copy)NSString * s
+#define kPropertyNSInteger(s)  @property(nonatomic,assign)NSIntegers
+#define kPropertyFloat(s)  @property(nonatomic,assign)floats
+#define kPropertyLongLong(s)  @property(nonatomic,assign)long long s
+#define kPropertyNSDictionary(s)  @property(nonatomic,strong)NSDictionary * s
+#define kPropertyNSArray(s)  @property(nonatomic,strong)NSArray * s
+#define kPropertyNSMutableArray(s)  @property(nonatomic,strong)NSMutableArray * s
+
+
+
+
+
 #endif /* ToolMarco_h */
