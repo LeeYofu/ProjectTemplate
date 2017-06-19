@@ -11,7 +11,7 @@
 
 @implementation NSString (YFMD5_Sha)
 
-//16位MD5加密方式
+// 16位MD5加密方式
 - (NSString *)getMd5_16Bit_String {
     
     const char *cStr = [self UTF8String];
@@ -27,7 +27,7 @@
 }
 
 
-//32位MD5加密方式
+// 32位MD5加密方式
 - (NSString *)getMd5_32Bit_String {
     
     const char *cStr = [self UTF8String];
@@ -40,7 +40,7 @@
     return result;
 }
 
-//sha1加密方式
+// sha1加密方式
 - (NSString *)getSha1String {
     
     const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
@@ -59,7 +59,7 @@
     return result;
 }
 
-//sha256加密方式
+// sha256加密方式
 - (NSString *)getSha256String {
     
     const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
@@ -78,7 +78,7 @@
     return result;
 }
 
-//sha384加密方式
+// sha384加密方式
 - (NSString *)getSha384String {
     
     const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
@@ -97,7 +97,7 @@
     return result;
 }
 
-//sha512加密方式
+// sha512加密方式
 - (NSString *) getSha512String {
     
     const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];

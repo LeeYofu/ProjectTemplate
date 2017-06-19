@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonCryptor.h>
 
 @implementation NSData (YFAES)
-- (NSData *)getAES256EncryptWithKey:(NSString *)key {//加密
+- (NSData *)getAES256EncryptWithKey:(NSString *)key { // 加密
     
     char keyPtr[kCCKeySizeAES256 + 1];
     bzero(keyPtr, sizeof(keyPtr));
@@ -34,7 +34,7 @@
 }
 
 
-- (NSData *)getAES256DecryptWithKey:(NSString *)key {// 解密
+- (NSData *)getAES256DecryptWithKey:(NSString *)key { // 解密
     
     char keyPtr[kCCKeySizeAES256 + 1];
     bzero(keyPtr, sizeof(keyPtr));

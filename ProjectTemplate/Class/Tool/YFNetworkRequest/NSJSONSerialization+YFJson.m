@@ -12,14 +12,13 @@
 
 + (nullable NSString *)stringWithJSONObject:(nonnull id)JSONObject {
     
-    if (![NSJSONSerialization isValidJSONObject:JSONObject]){
+    if (![NSJSONSerialization isValidJSONObject:JSONObject]) {
         
         NSLog(@"The JSONObject is not JSON Object");
         return nil;
     }
     NSData *data = [NSJSONSerialization dataWithJSONObject:JSONObject options:NSJSONWritingPrettyPrinted error:nil];
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
 }
 
 + (nullable id)objectWithJSONString:(nonnull NSString *)JSONString {
