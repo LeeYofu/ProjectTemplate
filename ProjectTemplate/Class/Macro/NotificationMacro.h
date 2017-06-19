@@ -13,7 +13,6 @@
  *  本类放一些通知的宏定义
  */
 
-#define kNetworkStatusDidChangedNotification @"kNetworkStatusDidChangedNotification"
 
 
 

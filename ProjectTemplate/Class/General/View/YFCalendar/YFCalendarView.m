@@ -81,7 +81,7 @@
     NSInteger todayDateIndex = 0;
     self.startDate = [NSDate dateWithTimeIntervalSince1970:0];
     self.monthCount = 10000;
-    NSLog(@"1");
+//    NSLog(@"1");
     [self.allMonthDateArray removeAllObjects];
     
     NSDate *tempDate = self.startDate;
@@ -96,7 +96,7 @@
         
         tempDate = [tempDate nextMonthDate];
     }
-    NSLog(@"2");
+//    NSLog(@"2");
     self.selectedIndex = todayDateIndex;
 }
 

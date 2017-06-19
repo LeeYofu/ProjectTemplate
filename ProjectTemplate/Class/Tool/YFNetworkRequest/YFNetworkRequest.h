@@ -23,6 +23,8 @@ typedef NS_ENUM(NSUInteger, YFNetworkRequestCachePolicy) {
 typedef void(^SuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 typedef void(^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 
+#define kNetworkStatusDidChangedNotification @"kNetworkStatusDidChangedNotification"
+
 @interface YFNetworkRequest : AFHTTPSessionManager
 
 #pragma mark GET

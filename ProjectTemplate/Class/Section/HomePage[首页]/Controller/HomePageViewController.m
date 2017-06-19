@@ -40,6 +40,13 @@
 
     
     [self testCalendarView];
+    [self testNetworkRequest];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(20, 100, 80, 80);
+    button.backgroundColor = kYellowColor;
+    [button addTarget:self action:@selector(testNetworkRequest) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
 - (void)testCalendarView {
@@ -62,6 +69,77 @@
     
     
     
+}
+
+#define kTimeLineUrl @"https://goldfishspot.qdztrk.com/goldfishfinance/quotation/quotationAllPrices?quotation=SH0001"
+#define kDayKlineUrl @"https://goldfishspot.qdztrk.com/goldfishfinance/quotation/echartData?bCode=SH0001&dType=DAY&count=500&quota=MA"
+#define kWeekKlineUrl @"https://goldfishspot.qdztrk.com/goldfishfinance/quotation/echartData?bCode=SH0001&dType=WEEK&count=150&quota=MA"
+#define kMonthKlineUrl @"https://goldfishspot.qdztrk.com/goldfishfinance/quotation/echartData?bCode=SH0001&dType=MONTH&count=500&quota=MA"
+#define kYearKLineUrl @"https://goldfishspot.qdztrk.com/goldfishfinance/quotation/echartData?bCode=SH0001&dType=YEAR&count=500&quota=MA"
+
+#define kZhangShuaiURL1 @"http://123.56.4.22:7070/baseWeb/app/homemenu/get?ifAll=1"
+#define kZhangShuaiURL2 @"http://123.56.4.22:7070/baseWeb/app/params/get"
+
+- (void)testNetworkRequest {
+    
+//    [YFNetworkRequest GET:kTimeLineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        NSLog(@"success------1");
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        
+//        NSLog(@"failure------1");
+//    }];
+//    
+//    [YFNetworkRequest GET:kDayKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        NSLog(@"success------2");
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        
+//        NSLog(@"failure------2");
+//    }];
+//    
+//    [YFNetworkRequest GET:kWeekKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        NSLog(@"success------3");
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        
+//        NSLog(@"failure------3");
+//    }];
+//    
+//    [YFNetworkRequest GET:kMonthKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        NSLog(@"success------4");
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        
+//        NSLog(@"failure------4");
+//    }];
+//    
+//    [YFNetworkRequest GET:kYearKLineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        
+//        NSLog(@"success------5");
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        
+//        NSLog(@"failure------5");
+//    }];
+    
+    NSLog(@"\n");
+    
+    [YFNetworkRequest POST:kZhangShuaiURL1 parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"success------6");
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        NSLog(@"failure------6");
+    }];
+    
+    NSDictionary *parameters = @{ @"paramCode" : @"AppUpdateWarnInterval" };
+    [YFNetworkRequest POST:kZhangShuaiURL2 parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"success------7");
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        NSLog(@"failure------7");
+    }];
 }
 
 - (void)showButtonDidClicked {

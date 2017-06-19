@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSMutableArray *itemsArray; // 盛放items模型的数组
 
+@property (nonatomic, strong) CustomTabBar *customTabbar;
+
 @end
 
 @implementation CustomTabBarController
@@ -33,19 +35,19 @@
     return _itemsArray;
 }
 
-+ (void)initialize {
-    
-    UITabBarItem *tabBarItem = [UITabBarItem appearance];
-    NSMutableDictionary *normalDic = [NSMutableDictionary dictionary];
-    normalDic[NSFontAttributeName] = kFont_11;
-    normalDic[NSForegroundColorAttributeName] = kCustomRGBColor(128, 128, 128, 1.0f);
-    [tabBarItem setTitleTextAttributes:normalDic forState:UIControlStateNormal];
-    
-    NSMutableDictionary *selecterDic = [NSMutableDictionary dictionary];
-    selecterDic[NSFontAttributeName] = kFont_11;
-    selecterDic[NSForegroundColorAttributeName] = kThemeColor;
-    [tabBarItem setTitleTextAttributes:selecterDic forState:UIControlStateSelected];
-}
+//+ (void)initialize {
+//    
+//    UITabBarItem *tabBarItem = [UITabBarItem appearance];
+//    NSMutableDictionary *normalDic = [NSMutableDictionary dictionary];
+//    normalDic[NSFontAttributeName] = kFont_11;
+//    normalDic[NSForegroundColorAttributeName] = kCustomRGBColor(128, 128, 128, 1.0f);
+//    [tabBarItem setTitleTextAttributes:normalDic forState:UIControlStateNormal];
+//    
+//    NSMutableDictionary *selecterDic = [NSMutableDictionary dictionary];
+//    selecterDic[NSFontAttributeName] = kFont_11;
+//    selecterDic[NSForegroundColorAttributeName] = kThemeColor;
+//    [tabBarItem setTitleTextAttributes:selecterDic forState:UIControlStateSelected];
+//}
 
 - (void)viewDidLoad {
     
@@ -56,12 +58,12 @@
     [self createChildViewController];
     
     [self createCustomTabbar];
-
-    
 }
 
 - (void)config {
     
+    self.view.backgroundColor = kWhiteColor;
+
     self.titleArray = @[ @"首页", @"行情", @"直播", @"策略" ];
     self.viewControllerNameArray = @[ @"HomePageViewController", @"MarketQuotationViewController", @"LiveViewController", @"TacticsViewController" ];
     self.imageNameArray = @[ @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击" ];
@@ -86,6 +88,8 @@
     // 盛放 item模型的数组赋值
     tabBar.itemsArray = self.itemsArray;
     [self.tabBar addSubview:tabBar];
+    
+    self.customTabbar = tabBar;
     
     // 隐藏分割线
     self.tabBar.clipsToBounds = YES;
@@ -119,6 +123,12 @@
     }
 }
 
-
+// 放置被系统的tabBar的子控件覆盖自定义的tabBar
+- (void)viewDidLayoutSubviews {
+    
+    [super viewDidLayoutSubviews];
+    
+    [self.tabBar bringSubviewToFront:self.customTabbar];
+}
 
 @end

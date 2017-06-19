@@ -37,6 +37,7 @@
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
+    
     self = [super initWithFrame:frame];
     
     if (self) {
@@ -57,6 +58,7 @@
 
 // 传递UITabBarItem给tabBarButton,给tabBarButton内容赋值
 - (void)setTabBarItem:(UITabBarItem *)tabBarItem {
+    
     _tabBarItem = tabBarItem;
     
     [self observeValueForKeyPath:nil ofObject:nil change:nil context:nil];
