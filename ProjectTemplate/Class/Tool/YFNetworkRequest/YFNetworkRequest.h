@@ -60,6 +60,7 @@ typedef void(^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 + (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters imageDatas:(NSArray *)imageDatas imageNames:(NSArray *)imageNames videoData:(NSData *)videoData success:(SuccessBlock)success failure:(FailureBlock)failure;
 
 #pragma mark - 获取当前网络状态
+// 获取当前网络状态
 + (NetworkStatus)getCurrentNetworkStatus;
 
 @end

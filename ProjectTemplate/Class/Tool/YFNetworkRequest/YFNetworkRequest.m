@@ -126,17 +126,20 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
     switch (cachePolicy) {
             
         case YFNetworkRequestReturnCacheDataThenLoad : { // 先返回缓存，同时请求
+            
             if (object) {
                 
                 success(nil,object);
             }
-            break;
         }
+            break;
+            
         case YFNetworkRequestReloadIgnoringLocalCacheData : { // 忽略本地缓存直接请求
             
             // 不做处理，直接请求
-            break;
         }
+            break;
+            
         case YFNetworkRequestReturnCacheDataElseLoad : { // 有缓存就返回缓存，没有就请求
             
             if (object) { // 有缓存
@@ -144,8 +147,9 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
                 success(nil,object);
                 return task;
             }
-            break;
         }
+            break;
+            
         case YFNetworkRequestReturnCacheDataDontLoad : { // 有缓存就返回缓存,从不请求（用于没有网络）
             
             if (object) { // 有缓存
@@ -154,10 +158,13 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
             }
             return task; // 退出从不请求
         }
-        default: {
-            
             break;
+            
+        default : {
+            
+            
         }
+            break;
     }
     
     task = [self requestMethod:type URLString:URLString parameters:parameters cache:cache cacheKey:cacheKey success:success failure:failure];
@@ -185,8 +192,9 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
                 
                 failure(task, error);
             }];
-            break;
         }
+            break;
+
         case YFNetworkRequestTypePOST : {
             
             task = [[YFNetworkRequest sharedInstance] POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -202,8 +210,9 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
                 
                 failure(task, error);
             }];
-            break;
         }
+            break;
+
         case YFNetworkRequestTypePUT : {
             
             task = [[YFNetworkRequest sharedInstance] PUT:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -219,8 +228,9 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
                 
                 failure(task, error);
             }];
-            break;
         }
+            break;
+
         case YFNetworkRequestTypeDELETE : {
             
             task = [[YFNetworkRequest sharedInstance] DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -236,9 +246,13 @@ static NSString * const YFNetworkRequestCache = @"YFNetworkRequestCache";
                 
                 failure(task, error);
             }];
-            break;
         }
-        default:
+            break;
+
+        default : {
+            
+            
+        }
             break;
     }
 
