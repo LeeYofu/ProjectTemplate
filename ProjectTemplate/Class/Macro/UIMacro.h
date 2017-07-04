@@ -61,6 +61,12 @@
 #define kFont_9 [UIFont systemFontOfSize:9]
 #define kFont_8 [UIFont systemFontOfSize:8]
 
+#define kFontL(size) [UIFont systemFontOfSize:size weight:UIFontWeightLight]
+#define kFontR(size) [UIFont systemFontOfSize:size weight:UIFontWeightRegular]
+#define kFontB(size) [UIFont systemFontOfSize:size weight:UIFontWeightBold]
+#define kFontT(size) [UIFont systemFontOfSize:size weight:UIFontWeightThin]
+#define kFont(size) FontL(s)
+
 
 #pragma mark - Frame
 #define kSeparatorLineHeight (1 / [UIScreen mainScreen].scale)
