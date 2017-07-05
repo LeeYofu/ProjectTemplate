@@ -20,7 +20,7 @@
     [self configTextFieldTextViewTintColor];
     [self configIQKeyboardManager];
     [self configMobClick];
-    [self configLaunchAdvertisementView];
+//    [self configLaunchAdvertisementView];
     [self configAvoidCrash];
     [self configStatusBarHiddenWhenLaunch];
 }

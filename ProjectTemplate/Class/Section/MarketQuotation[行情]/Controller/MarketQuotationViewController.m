@@ -7,8 +7,11 @@
 //
 
 #import "MarketQuotationViewController.h"
+#import "YFMarketView.h"
 
-@interface MarketQuotationViewController ()
+@interface MarketQuotationViewController () <YFMarketViewDataSource>
+
+@property (nonatomic, strong) YFMarketView *marketView;
 
 @end
 
@@ -17,6 +20,20 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.marketView = [YFMarketView marketWithFrame:CGRectMake(0, 100, kScreenWidth, 400) dataSource:self];
+    [self.view addSubview:self.marketView];
+    
+    
+}
+
+- (NSArray *)YFMarketView:(YFMarketView *)marketView marketDataOfType:(YFMarketLineDetailType)type {
+    
+    return nil;
+}
+
+- (void)YFMarketView:(YFMarketView *)marketView didSelectedLineDetailType:(YFMarketLineDetailType)type {
+    
     
 }
 
