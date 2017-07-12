@@ -22,6 +22,7 @@
     
     [super viewDidLoad];
     
+    
 }
 
 - (void)createSubviews {
@@ -30,6 +31,7 @@
     
     [self testCalendarView];
     [self testNetworkRequest];
+    [self testAnimationLabel];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(20, 100, 80, 80);
@@ -55,9 +57,6 @@
     
     self.calendarView = [YFCalendarView calendarViewWithFrame:CGRectMake(0, kNavigationBarHeight, kScreenWidth, 200)];
     [self.view addSubview:self.calendarView];
-    
-    
-    
 }
 
 #define kTimeLineUrl @"https://goldfishspot.qdztrk.com/goldfishfinance/quotation/quotationAllPrices?quotation=SH0001"
@@ -147,5 +146,45 @@
 //    
 //    NSLog(@"index = %ld", index);
 //}
+
+- (void)testAnimationLabel {
+    
+    UILabel *label = [UILabel new];
+    label.frame = CGRectMake(20, 450, 100, 40);
+    [self.view addSubview:label];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        // 方法一
+        CATransition *animation = [CATransition animation];
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        animation.type = kCATransitionFade;
+        animation.duration = 0.75;
+        [label.layer addAnimation:animation forKey:@"kCATransitionFade"];
+        label.text = @"New";
+    });
+    
+    [self performSelector:@selector(aaa) withObject:self afterDelay:2.0f];
+    
+    
+//    // 方法二
+//    [UIView transitionWithView:label
+//                      duration:0.25f
+//                       options:UIViewAnimationOptionTransitionCrossDissolve
+//                    animations:^{
+//                        
+//                        label.text = @"Well done!";
+//                        
+//                    } completion:nil];
+
+    
+//  // 方法三
+//    [UIView animateWithDuration:1.0
+//                     animations:^{
+//                         label.alpha = 0.0f;
+//                         label.text = @"newText";
+//                         label.alpha = 1.0f;
+//                     }];
+}
 
 @end
