@@ -14,41 +14,41 @@
 // 导入头文件  YFSecurityUtil.h 即可使用
 // QQ 390806992
 
-#define kEncrypt_DecryptAESPublicPassword @"liyoufu" // AES加解密密码
-#define kEncrypt_DecryptDESPublicPassword @"liyoufu" // DES加解密密码
+#define kAESEncrypt_DecryptPublicPassword @"liyoufu" // AES加解密密码
+#define kDESEncrypt_DecryptPublicPassword @"liyoufu" // DES加解密密码
 
 #pragma mark - 【MD5加密】
 // 16位MD5加密方式
-+ (NSString *)getMd5_16Bit_String:(NSString *)inputString;
++ (NSString *)getMd5_16Bit_StringWithString:(NSString *)inputString;
 // 32位MD5加密方式
-+ (NSString *)getMd5_32Bit_String:(NSString *)inputString;
++ (NSString *)getMd5_32Bit_StringWithString:(NSString *)inputString;
 
 #pragma mark - 【SHA加密】
 // sha1加密方式
-+ (NSString *)getSha1String:(NSString *)inputString;
++ (NSString *)getSha1StringWithString:(NSString *)inputString;
 // sha256加密方式
-+ (NSString *)getSha256String:(NSString *)inputString;
++ (NSString *)getSha256StringWithString:(NSString *)inputString;
 // sha384加密方式
-+ (NSString *)getSha384String:(NSString *)inputString;
++ (NSString *)getSha384StringWithString:(NSString *)inputString;
 // sha512加密方式
-+ (NSString *)getSha512String:(NSString *)inputString;
++ (NSString *)getSha512StringWithString:(NSString *)inputString;
 
 #pragma mark - 【base64编解码】
-+ (NSString *)getEncodeBase64String:(NSString *)inputString;
-+ (NSString *)getDecodeBase64String:(NSString *)inputString;
-+ (NSString *)getEncodeBase64Data:(NSData *)inputData;
-+ (NSString *)getDecodeBase64Data:(NSData *)inputData;
++ (NSString *)getBase64EncodeStringWithString:(NSString *)inputString;
++ (NSString *)getBase64DecodeStringWithString:(NSString *)inputString;
++ (NSString *)getBase64EncodeStringWithData:(NSData *)inputData;
++ (NSString *)getBase64DecodeStringWithData:(NSData *)inputData;
 
 #pragma mark - 【AES加解密】
 // 将string转成带密码的data
-+ (NSData *)getEncryptAESString:(NSString *)inputString;
++ (NSData *)getAESEncryptDataWithString:(NSString *)inputString;
 // 将带密码的data转成string
-+ (NSString *)getDecryptAESData:(NSData *)inputData;
++ (NSString *)getAESDecryptStringWithData:(NSData *)inputData;
 
 #pragma mark - 【DES加解密】
 // 将不带密码string转成带密码的string（加密）
-+ (NSString *)getEncryptDESString:(NSString *)inputString;
++ (NSString *)getDESEncryptStringWithString:(NSString *)inputString;
 // 将带密码的string转换成不带密码的string（解密）
-+ (NSString *)getDecryptDESString:(NSString *)inputString;
++ (NSString *)getDESDecryptStringWithString:(NSString *)inputString;
 
 @end
