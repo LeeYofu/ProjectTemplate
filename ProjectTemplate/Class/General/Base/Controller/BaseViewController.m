@@ -35,7 +35,7 @@
     [super viewWillAppear:animated];
     
     // 默认设置状态栏颜色
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
+    kSetStatusBarStyle(UIStatusBarStyleDefault, NO);
 }
 
 - (void)viewDidAppear:(BOOL)animated {

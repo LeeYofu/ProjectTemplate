@@ -164,7 +164,7 @@
         label.text = @"New";
     });
     
-    [self performSelector:@selector(aaa) withObject:self afterDelay:2.0f];
+//    [self performSelector:@selector(aaa) withObject:self afterDelay:2.0f];
     
     
 //    // 方法二

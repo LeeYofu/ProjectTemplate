@@ -33,7 +33,7 @@
 // sha512加密方式
 + (NSString *)getSha512StringWithString:(NSString *)inputString;
 
-#pragma mark - 【base64编解码】
+#pragma mark - 【BASE64编解码】
 + (NSString *)getBase64EncodeStringWithString:(NSString *)inputString;
 + (NSString *)getBase64DecodeStringWithString:(NSString *)inputString;
 + (NSString *)getBase64EncodeStringWithData:(NSData *)inputData;

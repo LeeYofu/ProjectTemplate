@@ -71,4 +71,6 @@
 #pragma mark - Frame
 #define kSeparatorLineHeight (1 / [UIScreen mainScreen].scale)
 
+#define kSetStatusBarStyle(statusBarStyle, isAnimated) [[UIApplication sharedApplication] setStatusBarStyle:statusBarStyle animated:isAnimated]
+
 #endif /* UIMarco_h */
