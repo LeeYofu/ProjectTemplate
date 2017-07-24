@@ -70,45 +70,45 @@
 
 - (void)testNetworkRequest {
     
-//    [YFNetworkRequest GET:kTimeLineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"success------1");
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        
-//        NSLog(@"failure------1");
-//    }];
-//    
-//    [YFNetworkRequest GET:kDayKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"success------2");
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        
-//        NSLog(@"failure------2");
-//    }];
-//    
-//    [YFNetworkRequest GET:kWeekKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"success------3");
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        
-//        NSLog(@"failure------3");
-//    }];
-//    
-//    [YFNetworkRequest GET:kMonthKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"success------4");
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        
-//        NSLog(@"failure------4");
-//    }];
-//    
-//    [YFNetworkRequest GET:kYearKLineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
-//        NSLog(@"success------5");
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        
-//        NSLog(@"failure------5");
-//    }];
+    //    [YFNetworkRequest GET:kTimeLineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    //
+    //        NSLog(@"success------1");
+    //    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    //
+    //        NSLog(@"failure------1");
+    //    }];
+    //
+    //    [YFNetworkRequest GET:kDayKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    //
+    //        NSLog(@"success------2");
+    //    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    //
+    //        NSLog(@"failure------2");
+    //    }];
+    //
+    //    [YFNetworkRequest GET:kWeekKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    //
+    //        NSLog(@"success------3");
+    //    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    //
+    //        NSLog(@"failure------3");
+    //    }];
+    //
+    //    [YFNetworkRequest GET:kMonthKlineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    //
+    //        NSLog(@"success------4");
+    //    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    //
+    //        NSLog(@"failure------4");
+    //    }];
+    //
+    //    [YFNetworkRequest GET:kYearKLineUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    //
+    //        NSLog(@"success------5");
+    //    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    //
+    //        NSLog(@"failure------5");
+    //    }];
     
     NSLog(@"\n");
     
@@ -133,17 +133,17 @@
 - (void)showButtonDidClicked {
     
     [self.calendarView show];
-
+    
 }
 
 - (void)hideButtonDidClicked {
     
     [self.calendarView hide];
-
+    
 }
 
 //- (void)bannerViewDidClickedAtIndex:(NSInteger)index {
-//    
+//
 //    NSLog(@"index = %ld", index);
 //}
 
@@ -153,6 +153,7 @@
     label.frame = CGRectMake(20, 450, 100, 40);
     [self.view addSubview:label];
     
+    // 延时加载
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         // 方法一
@@ -164,27 +165,21 @@
         label.text = @"New";
     });
     
-//    [self performSelector:@selector(aaa) withObject:self afterDelay:2.0f];
+    
+    // 方法二
+    [UIView transitionWithView:label duration:0.25f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        
+        label.text = @"Well done!";
+    } completion:nil];
     
     
-//    // 方法二
-//    [UIView transitionWithView:label
-//                      duration:0.25f
-//                       options:UIViewAnimationOptionTransitionCrossDissolve
-//                    animations:^{
-//                        
-//                        label.text = @"Well done!";
-//                        
-//                    } completion:nil];
-
-    
-//  // 方法三
-//    [UIView animateWithDuration:1.0
-//                     animations:^{
-//                         label.alpha = 0.0f;
-//                         label.text = @"newText";
-//                         label.alpha = 1.0f;
-//                     }];
+    // 方法三
+    [UIView animateWithDuration:1.0 animations:^{
+        
+        label.alpha = 0.0f;
+        label.text = @"newText";
+        label.alpha = 1.0f;
+    }];
 }
 
 @end

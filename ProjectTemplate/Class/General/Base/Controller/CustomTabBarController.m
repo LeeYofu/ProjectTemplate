@@ -93,7 +93,6 @@
     
     // 隐藏分割线
     self.tabBar.clipsToBounds = YES;
-
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
