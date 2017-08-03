@@ -73,7 +73,6 @@
     imageAdconfiguration.duration = 3.0f;
     // 显示图片开屏广告
     [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
-    
 }
 
 #pragma mark - 避免崩溃

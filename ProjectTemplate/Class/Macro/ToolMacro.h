@@ -85,8 +85,8 @@ return shared##className; \
 
 // property属性快速声明
 #define kPropertyString(s)  @property(nonatomic,copy)NSString * s
-#define kPropertyNSInteger(s)  @property(nonatomic,assign)NSIntegers
-#define kPropertyFloat(s)  @property(nonatomic,assign)floats
+#define kPropertyNSInteger(s)  @property(nonatomic,assign)NSInteger s
+#define kPropertyFloat(s)  @property(nonatomic,assign)float s
 #define kPropertyLongLong(s)  @property(nonatomic,assign)long long s
 #define kPropertyNSDictionary(s)  @property(nonatomic,strong)NSDictionary * s
 #define kPropertyNSArray(s)  @property(nonatomic,strong)NSArray * s

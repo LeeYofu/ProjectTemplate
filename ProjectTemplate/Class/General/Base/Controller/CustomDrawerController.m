@@ -23,10 +23,13 @@
     
     [MMExampleDrawerVisualStateManager sharedManager].leftDrawerAnimationType = MMDrawerAnimationTypeSlide;
     
+    // left
     UserCenterViewController *userCenterVC = [UserCenterViewController new];
-    CustomTabBarController *tabBarC = [CustomTabBarController new];
     CustomNavigationController *userCenterNaviC = [[CustomNavigationController alloc] initWithRootViewController:userCenterVC];
-    
+    // center
+    CustomTabBarController *tabBarC = [CustomTabBarController new];
+
+    // drawerController
     CustomDrawerController *drawerController = [[CustomDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:userCenterNaviC];
     
     drawerController.showsShadow = NO;
@@ -39,7 +42,7 @@
     
     drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     
-    //左右 控制器打开的效果 这里设置了 视觉差 效果
+    // 左右 控制器打开的效果 这里设置了 视觉差 效果
     [drawerController setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
         
         MMDrawerControllerDrawerVisualStateBlock block;
