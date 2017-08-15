@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+AppService.h"
-#import "CustomDrawerController.h"
+#import "CustomTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [CustomDrawerController drawerController];
+    self.window.rootViewController = [CustomTabBarController new];
     
     [self.window makeKeyAndVisible];
     

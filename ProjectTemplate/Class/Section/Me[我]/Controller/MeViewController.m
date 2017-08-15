@@ -1,18 +1,18 @@
 //
-//  HomePageViewController.m
+//  MeViewController.m
 //  ProjectTemplate
 //
 //  Created by 李友富 on 2017/8/15.
 //  Copyright © 2017年 李友富. All rights reserved.
 //
 
-#import "HomePageViewController.h"
+#import "MeViewController.h"
 
-@interface HomePageViewController ()
+@interface MeViewController ()
 
 @end
 
-@implementation HomePageViewController
+@implementation MeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

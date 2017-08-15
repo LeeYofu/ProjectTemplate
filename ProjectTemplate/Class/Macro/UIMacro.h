@@ -11,11 +11,10 @@
 
 #pragma mark - 颜色
 /* 颜色 */
-#define kThemeColor kCustomRGBColor(71, 145, 244, 1.0) // 主题色
+#define kThemeColor kCustomRGBColor(171, 145, 244, 1.0) // 主题色
 #define kLineViewColor kColor0xded6de // 分割线颜色
-#define kBackgroundColor kColor0xeff0f4 // 背景色
 
-// 自定义颜色
+// 自定义颜色 UI
 #define kColor0x333333 kCustom0xColor(0x333333, 1.0f)
 #define kColor0x999999 kCustom0xColor(0x999999, 1.0f)
 #define kColor0xded6de kCustom0xColor(0xded6de, 1.0f)
@@ -39,10 +38,9 @@
 #define kMagentaColor   [UIColor magentaColor]
 
 // 随机色
-#define kRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
-
 #define kCustomRGBColor(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)] // 自定义颜色rgb颜色
 #define kCustom0xColor(rgbValue, alphaValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 blue:((float)(rgbValue & 0x0000FF))/255.0 alpha:alphaValue] // 自定义16进制颜色
+#define kRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
 
 
 #pragma mark - 字体

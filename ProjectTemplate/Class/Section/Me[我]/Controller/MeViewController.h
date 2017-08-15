@@ -1,5 +1,5 @@
 //
-//  HomePageViewController.h
+//  MeViewController.h
 //  ProjectTemplate
 //
 //  Created by 李友富 on 2017/8/15.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface HomePageViewController : BaseViewController
+@interface MeViewController : BaseViewController
 
 @end

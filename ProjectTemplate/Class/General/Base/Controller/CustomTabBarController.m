@@ -64,10 +64,10 @@
     
     self.view.backgroundColor = kWhiteColor;
 
-    self.titleArray = @[ @"首页", @"行情", @"直播", @"策略" ];
-    self.viewControllerNameArray = @[ @"HomePageViewController", @"MarketQuotationViewController", @"LiveViewController", @"TacticsViewController" ];
-    self.imageNameArray = @[ @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击" ];
-    self.selectedImageNameArray = @[ @"首页-点击", @"首页-点击", @"首页-点击", @"首页-点击" ];
+    self.titleArray = @[ @"首页", @"资讯", @"交易", @"投教", @"我的" ];
+    self.viewControllerNameArray = @[ @"HomePageViewController", @"NewsViewController", @"TradeViewController", @"EducationViewController", @"MeViewController" ];
+    self.imageNameArray = @[ @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击", @"首页-未点击" ];
+    self.selectedImageNameArray = @[ @"首页-点击", @"首页-点击", @"首页-点击", @"首页-点击", @"首页-点击" ];
 }
 
 - (void)createChildViewController {

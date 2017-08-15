@@ -1,18 +1,18 @@
 //
-//  HomePageViewController.m
+//  TradeViewController.m
 //  ProjectTemplate
 //
 //  Created by 李友富 on 2017/8/15.
 //  Copyright © 2017年 李友富. All rights reserved.
 //
 
-#import "HomePageViewController.h"
+#import "TradeViewController.h"
 
-@interface HomePageViewController ()
+@interface TradeViewController ()
 
 @end
 
-@implementation HomePageViewController
+@implementation TradeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

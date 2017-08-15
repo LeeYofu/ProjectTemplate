@@ -23,6 +23,11 @@
 		2357CE5C1E5FDA5500629D2D /* IMG_1487.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE591E5FDA5500629D2D /* IMG_1487.JPG */; };
 		2357CE6C1E5FF0FB00629D2D /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2357CE6B1E5FF0FB00629D2D /* LineView.m */; };
 		2357CE711E60138900629D2D /* haha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE701E60138900629D2D /* haha.jpg */; };
+		235CC4391F42EEA3004EA379 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235CC4381F42EEA3004EA379 /* HomePageViewController.m */; };
+		235CC43C1F42EEB4004EA379 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235CC43B1F42EEB4004EA379 /* NewsViewController.m */; };
+		235CC43F1F42EECB004EA379 /* EducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235CC43E1F42EECB004EA379 /* EducationViewController.m */; };
+		235CC4421F42EED8004EA379 /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235CC4411F42EED8004EA379 /* TradeViewController.m */; };
+		235CC4451F42EEE0004EA379 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235CC4441F42EEE0004EA379 /* MeViewController.m */; };
 		237CA1631E568F4300182FE2 /* APPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 237CA1621E568F4300182FE2 /* APPTool.m */; };
 		239508351E5D799B00F7BC7D /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508311E5D799B00F7BC7D /* UIView+Category.m */; };
 		239508361E5D799B00F7BC7D /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 239508341E5D799B00F7BC7D /* NSString+Category.m */; };
@@ -47,11 +52,6 @@
 		23D858C11ECD4CBA001007E0 /* BaseWebview.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D858C01ECD4CBA001007E0 /* BaseWebview.m */; };
 		23DE66F21ECBE6F000580812 /* JinyuProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */; };
 		23DE66F51ECBECAA00580812 /* UIView+JinyuProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DE66F41ECBECAA00580812 /* UIView+JinyuProgressHUD.m */; };
-		23EC4B3A1ED66DDA00747C93 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EC4B371ED66DDA00747C93 /* UserCenterViewController.m */; };
-		23EC4B551ED66EB800747C93 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EC4B541ED66EB800747C93 /* HomePageViewController.m */; };
-		23EC4B581ED66F7F00747C93 /* MarketQuotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EC4B571ED66F7F00747C93 /* MarketQuotationViewController.m */; };
-		23EC4B5B1ED66F8900747C93 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EC4B5A1ED66F8900747C93 /* LiveViewController.m */; };
-		23EC4B5E1ED66F9400747C93 /* TacticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EC4B5D1ED66F9400747C93 /* TacticsViewController.m */; };
 		23EC4B861ED6810100747C93 /* YFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EC4B851ED6810100747C93 /* YFSegmentedControl.m */; };
 		23FA7CC81E52D75C005F5A17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FA7CC71E52D75C005F5A17 /* main.m */; };
 		23FA7CD11E52D75C005F5A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FA7CCF1E52D75C005F5A17 /* Main.storyboard */; };
@@ -121,6 +121,18 @@
 		2357CE6A1E5FF0FB00629D2D /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
 		2357CE6B1E5FF0FB00629D2D /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 		2357CE701E60138900629D2D /* haha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = haha.jpg; sourceTree = "<group>"; };
+		235CC41D1F42EB0E004EA379 /* APIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIMacro.h; sourceTree = "<group>"; };
+		235CC41E1F42EB3F004EA379 /* HomePageAPIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageAPIMacro.h; sourceTree = "<group>"; };
+		235CC4371F42EEA3004EA379 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		235CC4381F42EEA3004EA379 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		235CC43A1F42EEB4004EA379 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		235CC43B1F42EEB4004EA379 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		235CC43D1F42EECB004EA379 /* EducationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EducationViewController.h; sourceTree = "<group>"; };
+		235CC43E1F42EECB004EA379 /* EducationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EducationViewController.m; sourceTree = "<group>"; };
+		235CC4401F42EED8004EA379 /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
+		235CC4411F42EED8004EA379 /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
+		235CC4431F42EEE0004EA379 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		235CC4441F42EEE0004EA379 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		237CA1611E568F4300182FE2 /* APPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPTool.h; sourceTree = "<group>"; };
 		237CA1621E568F4300182FE2 /* APPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPTool.m; sourceTree = "<group>"; };
 		239508301E5D799B00F7BC7D /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
@@ -131,7 +143,6 @@
 		239508381E5D7E1B00F7BC7D /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
 		2396C4751E53FD2B007BD142 /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
 		2396C4761E53FD2B007BD142 /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
-		23B6A2431ED517EE001F768D /* APIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIMacro.h; sourceTree = "<group>"; };
 		23B6A2441ED517EE001F768D /* APPMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMacro.h; sourceTree = "<group>"; };
 		23B6A2451ED517EE001F768D /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		23B6A2461ED517EE001F768D /* NotificationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationMacro.h; sourceTree = "<group>"; };
@@ -175,16 +186,6 @@
 		23DE66F11ECBE6F000580812 /* JinyuProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinyuProgressHUD.m; sourceTree = "<group>"; };
 		23DE66F31ECBECAA00580812 /* UIView+JinyuProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JinyuProgressHUD.h"; sourceTree = "<group>"; };
 		23DE66F41ECBECAA00580812 /* UIView+JinyuProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JinyuProgressHUD.m"; sourceTree = "<group>"; };
-		23EC4B361ED66DDA00747C93 /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
-		23EC4B371ED66DDA00747C93 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
-		23EC4B531ED66EB800747C93 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
-		23EC4B541ED66EB800747C93 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
-		23EC4B561ED66F7F00747C93 /* MarketQuotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketQuotationViewController.h; sourceTree = "<group>"; };
-		23EC4B571ED66F7F00747C93 /* MarketQuotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketQuotationViewController.m; sourceTree = "<group>"; };
-		23EC4B591ED66F8900747C93 /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
-		23EC4B5A1ED66F8900747C93 /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
-		23EC4B5C1ED66F9400747C93 /* TacticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TacticsViewController.h; sourceTree = "<group>"; };
-		23EC4B5D1ED66F9400747C93 /* TacticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TacticsViewController.m; sourceTree = "<group>"; };
 		23EC4B841ED6810100747C93 /* YFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFSegmentedControl.h; sourceTree = "<group>"; };
 		23EC4B851ED6810100747C93 /* YFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFSegmentedControl.m; sourceTree = "<group>"; };
 		23FA7CC31E52D75C005F5A17 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +426,211 @@
 			path = LineView;
 			sourceTree = "<group>";
 		};
+		235CC41C1F42EB0E004EA379 /* APIMacro */ = {
+			isa = PBXGroup;
+			children = (
+				235CC41D1F42EB0E004EA379 /* APIMacro.h */,
+				235CC41E1F42EB3F004EA379 /* HomePageAPIMacro.h */,
+			);
+			path = APIMacro;
+			sourceTree = "<group>";
+		};
+		235CC41F1F42EE61004EA379 /* Education[投教] */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4201F42EE61004EA379 /* Controller */,
+				235CC4211F42EE61004EA379 /* Model */,
+				235CC4221F42EE61004EA379 /* View */,
+			);
+			path = "Education[投教]";
+			sourceTree = "<group>";
+		};
+		235CC4201F42EE61004EA379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				235CC43D1F42EECB004EA379 /* EducationViewController.h */,
+				235CC43E1F42EECB004EA379 /* EducationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		235CC4211F42EE61004EA379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235CC4221F42EE61004EA379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235CC4231F42EE61004EA379 /* HomePage[首页] */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4241F42EE61004EA379 /* Controller */,
+				235CC4251F42EE61004EA379 /* Model */,
+				235CC4261F42EE61004EA379 /* View */,
+			);
+			path = "HomePage[首页]";
+			sourceTree = "<group>";
+		};
+		235CC4241F42EE61004EA379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4371F42EEA3004EA379 /* HomePageViewController.h */,
+				235CC4381F42EEA3004EA379 /* HomePageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		235CC4251F42EE61004EA379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235CC4261F42EE61004EA379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235CC4271F42EE61004EA379 /* MarketDetail[行情详情] */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4281F42EE61004EA379 /* Controller */,
+				235CC4291F42EE61004EA379 /* Model */,
+				235CC42A1F42EE61004EA379 /* View */,
+			);
+			path = "MarketDetail[行情详情]";
+			sourceTree = "<group>";
+		};
+		235CC4281F42EE61004EA379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		235CC4291F42EE61004EA379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235CC42A1F42EE61004EA379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235CC42B1F42EE61004EA379 /* Me[我] */ = {
+			isa = PBXGroup;
+			children = (
+				235CC42C1F42EE61004EA379 /* Controller */,
+				235CC42D1F42EE61004EA379 /* Model */,
+				235CC42E1F42EE61004EA379 /* View */,
+			);
+			path = "Me[我]";
+			sourceTree = "<group>";
+		};
+		235CC42C1F42EE61004EA379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4431F42EEE0004EA379 /* MeViewController.h */,
+				235CC4441F42EEE0004EA379 /* MeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		235CC42D1F42EE61004EA379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235CC42E1F42EE61004EA379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235CC42F1F42EE61004EA379 /* News[资讯] */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4301F42EE61004EA379 /* Controller */,
+				235CC4311F42EE61004EA379 /* Model */,
+				235CC4321F42EE61004EA379 /* View */,
+			);
+			path = "News[资讯]";
+			sourceTree = "<group>";
+		};
+		235CC4301F42EE61004EA379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				235CC43A1F42EEB4004EA379 /* NewsViewController.h */,
+				235CC43B1F42EEB4004EA379 /* NewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		235CC4311F42EE61004EA379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235CC4321F42EE61004EA379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235CC4331F42EE61004EA379 /* Trade[交易] */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4341F42EE61004EA379 /* Controller */,
+				235CC4351F42EE61004EA379 /* Model */,
+				235CC4361F42EE61004EA379 /* View */,
+			);
+			path = "Trade[交易]";
+			sourceTree = "<group>";
+		};
+		235CC4341F42EE61004EA379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				235CC4401F42EED8004EA379 /* TradeViewController.h */,
+				235CC4411F42EED8004EA379 /* TradeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		235CC4351F42EE61004EA379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235CC4361F42EE61004EA379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		237CA1601E568F2700182FE2 /* APPTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,7 +678,7 @@
 		23B6A2421ED517EE001F768D /* Macro */ = {
 			isa = PBXGroup;
 			children = (
-				23B6A2431ED517EE001F768D /* APIMacro.h */,
+				235CC41C1F42EB0E004EA379 /* APIMacro */,
 				23B6A2441ED517EE001F768D /* APPMacro.h */,
 				23B6A2451ED517EE001F768D /* Macro.h */,
 				23B6A2461ED517EE001F768D /* NotificationMacro.h */,
@@ -556,264 +762,6 @@
 			children = (
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		23EC4B241ED66DDA00747C93 /* HomePage[首页] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B251ED66DDA00747C93 /* Controller */,
-				23EC4B261ED66DDA00747C93 /* Model */,
-				23EC4B271ED66DDA00747C93 /* View */,
-			);
-			path = "HomePage[首页]";
-			sourceTree = "<group>";
-		};
-		23EC4B251ED66DDA00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B531ED66EB800747C93 /* HomePageViewController.h */,
-				23EC4B541ED66EB800747C93 /* HomePageViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B261ED66DDA00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B271ED66DDA00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B281ED66DDA00747C93 /* Live[直播] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B291ED66DDA00747C93 /* Controller */,
-				23EC4B2A1ED66DDA00747C93 /* Model */,
-				23EC4B2B1ED66DDA00747C93 /* View */,
-			);
-			path = "Live[直播]";
-			sourceTree = "<group>";
-		};
-		23EC4B291ED66DDA00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B591ED66F8900747C93 /* LiveViewController.h */,
-				23EC4B5A1ED66F8900747C93 /* LiveViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B2A1ED66DDA00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B2B1ED66DDA00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B2C1ED66DDA00747C93 /* MarketQuotation[行情] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B2D1ED66DDA00747C93 /* Controller */,
-				23EC4B2E1ED66DDA00747C93 /* Model */,
-				23EC4B2F1ED66DDA00747C93 /* View */,
-			);
-			path = "MarketQuotation[行情]";
-			sourceTree = "<group>";
-		};
-		23EC4B2D1ED66DDA00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B561ED66F7F00747C93 /* MarketQuotationViewController.h */,
-				23EC4B571ED66F7F00747C93 /* MarketQuotationViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B2E1ED66DDA00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B2F1ED66DDA00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B301ED66DDA00747C93 /* Tactics[策略] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B311ED66DDA00747C93 /* Controller */,
-				23EC4B321ED66DDA00747C93 /* Model */,
-				23EC4B331ED66DDA00747C93 /* View */,
-			);
-			path = "Tactics[策略]";
-			sourceTree = "<group>";
-		};
-		23EC4B311ED66DDA00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B5C1ED66F9400747C93 /* TacticsViewController.h */,
-				23EC4B5D1ED66F9400747C93 /* TacticsViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B321ED66DDA00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B331ED66DDA00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B341ED66DDA00747C93 /* UserCenter[个人中心] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B351ED66DDA00747C93 /* Controller */,
-				23EC4B381ED66DDA00747C93 /* Model */,
-				23EC4B391ED66DDA00747C93 /* View */,
-			);
-			path = "UserCenter[个人中心]";
-			sourceTree = "<group>";
-		};
-		23EC4B351ED66DDA00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B361ED66DDA00747C93 /* UserCenterViewController.h */,
-				23EC4B371ED66DDA00747C93 /* UserCenterViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B381ED66DDA00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B391ED66DDA00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B471ED66E8E00747C93 /* FinancialCalendar[金融日历] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B481ED66E8E00747C93 /* Controller */,
-				23EC4B491ED66E8E00747C93 /* Model */,
-				23EC4B4A1ED66E8E00747C93 /* View */,
-			);
-			path = "FinancialCalendar[金融日历]";
-			sourceTree = "<group>";
-		};
-		23EC4B481ED66E8E00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B491ED66E8E00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B4A1ED66E8E00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B4B1ED66E8E00747C93 /* HotNews[热点新闻] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B4C1ED66E8E00747C93 /* Controller */,
-				23EC4B4D1ED66E8E00747C93 /* Model */,
-				23EC4B4E1ED66E8E00747C93 /* View */,
-			);
-			path = "HotNews[热点新闻]";
-			sourceTree = "<group>";
-		};
-		23EC4B4C1ED66E8E00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B4D1ED66E8E00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B4E1ED66E8E00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23EC4B4F1ED66E8E00747C93 /* MarketNews[市场快讯] */ = {
-			isa = PBXGroup;
-			children = (
-				23EC4B501ED66E8E00747C93 /* Controller */,
-				23EC4B511ED66E8E00747C93 /* Model */,
-				23EC4B521ED66E8E00747C93 /* View */,
-			);
-			path = "MarketNews[市场快讯]";
-			sourceTree = "<group>";
-		};
-		23EC4B501ED66E8E00747C93 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		23EC4B511ED66E8E00747C93 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		23EC4B521ED66E8E00747C93 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		23EC4B831ED680E500747C93 /* YFSegmentedControl */ = {
@@ -967,14 +915,12 @@
 		23FA7D031E52E91C005F5A17 /* Section */ = {
 			isa = PBXGroup;
 			children = (
-				23EC4B241ED66DDA00747C93 /* HomePage[首页] */,
-				23EC4B2C1ED66DDA00747C93 /* MarketQuotation[行情] */,
-				23EC4B281ED66DDA00747C93 /* Live[直播] */,
-				23EC4B301ED66DDA00747C93 /* Tactics[策略] */,
-				23EC4B341ED66DDA00747C93 /* UserCenter[个人中心] */,
-				23EC4B471ED66E8E00747C93 /* FinancialCalendar[金融日历] */,
-				23EC4B4B1ED66E8E00747C93 /* HotNews[热点新闻] */,
-				23EC4B4F1ED66E8E00747C93 /* MarketNews[市场快讯] */,
+				235CC4231F42EE61004EA379 /* HomePage[首页] */,
+				235CC42F1F42EE61004EA379 /* News[资讯] */,
+				235CC4331F42EE61004EA379 /* Trade[交易] */,
+				235CC41F1F42EE61004EA379 /* Education[投教] */,
+				235CC42B1F42EE61004EA379 /* Me[我] */,
+				235CC4271F42EE61004EA379 /* MarketDetail[行情详情] */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -1174,7 +1120,7 @@
 		23FA7CBB1E52D75C005F5A17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = YF;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "李友富";
 				TargetAttributes = {
@@ -1299,25 +1245,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235CC4451F42EEE0004EA379 /* MeViewController.m in Sources */,
 				23FA7D0C1E52E91C005F5A17 /* AppDelegate.m in Sources */,
+				235CC4421F42EED8004EA379 /* TradeViewController.m in Sources */,
 				2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */,
+				235CC4391F42EEA3004EA379 /* HomePageViewController.m in Sources */,
 				23FA7D3D1E52F1FC005F5A17 /* CustomTabBarButton.m in Sources */,
 				23DE66F51ECBECAA00580812 /* UIView+JinyuProgressHUD.m in Sources */,
 				23FA7D511E52FE93005F5A17 /* GTMBase64.m in Sources */,
 				23D858B21ECD4C6C001007E0 /* CustomNavigationController.m in Sources */,
-				23EC4B5B1ED66F8900747C93 /* LiveViewController.m in Sources */,
 				230951A81ED9475000100190 /* YFCalendarView.m in Sources */,
 				23FA7D551E52FE93005F5A17 /* YFSecurityUtil.m in Sources */,
 				239508361E5D799B00F7BC7D /* NSString+Category.m in Sources */,
 				23D858B31ECD4C6C001007E0 /* CustomTabBarController.m in Sources */,
 				23FA7D401E52F211005F5A17 /* CustomTabBarBadgeView.m in Sources */,
+				235CC43C1F42EEB4004EA379 /* NewsViewController.m in Sources */,
 				23D858BB1ECD4C6C001007E0 /* BaseTableView.m in Sources */,
 				230951B41ED96D3C00100190 /* NSDate+YFCalendar.m in Sources */,
-				23EC4B581ED66F7F00747C93 /* MarketQuotationViewController.m in Sources */,
 				23FA7D5B1E52FEAB005F5A17 /* NSJSONSerialization+YFJson.m in Sources */,
 				23EC4B861ED6810100747C93 /* YFSegmentedControl.m in Sources */,
 				23D858B61ECD4C6C001007E0 /* BaseCollectionView.m in Sources */,
 				23D858BD1ECD4C6C001007E0 /* BaseTextField.m in Sources */,
+				235CC43F1F42EECB004EA379 /* EducationViewController.m in Sources */,
 				231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				23FA7D521E52FE93005F5A17 /* NSData+YFAES.m in Sources */,
 				23FA7CC81E52D75C005F5A17 /* main.m in Sources */,
@@ -1338,10 +1287,7 @@
 				23142C371ED81FF500CF2EBE /* BannerViewCollectionViewCell.m in Sources */,
 				23D858B01ECD4C6C001007E0 /* BaseViewController.m in Sources */,
 				239508391E5D7E1B00F7BC7D /* UIViewController+Category.m in Sources */,
-				23EC4B551ED66EB800747C93 /* HomePageViewController.m in Sources */,
 				23D858C11ECD4CBA001007E0 /* BaseWebview.m in Sources */,
-				23EC4B5E1ED66F9400747C93 /* TacticsViewController.m in Sources */,
-				23EC4B3A1ED66DDA00747C93 /* UserCenterViewController.m in Sources */,
 				231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */,
 				234E159A1F0B2D6E008133C9 /* UIColor+Category.m in Sources */,
 				230951AE1ED9561900100190 /* YFMonthCollectionViewCell.m in Sources */,

@@ -9,16 +9,19 @@
 #ifndef APIMacro_h
 #define APIMacro_h
 
-/**
- *  本文件可放请求API 拼接的路径
- */
+// 各个模块API头文件
+#import "HomePageAPIMacro.h"
 
-// base URL
+
+
+/* 测试环境 */
 #define kBaseURL @"https://goldfishspot.qdztrk.com"
 
-// 
-#define kGetDayKURL @"/goldfishfinance/quotation/echartData"
 
+
+
+/* 生产环境 */
+#define kBaseURL @"https://goldfishspot.qdztrk.com"
 
 
 

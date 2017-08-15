@@ -10,6 +10,6 @@
 
 @interface CustomDrawerController : MMDrawerController
 
-+ (instancetype)drawerController;
+//+ (instancetype)drawerController;
 
 @end
