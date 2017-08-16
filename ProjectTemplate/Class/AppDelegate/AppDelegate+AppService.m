@@ -98,10 +98,10 @@
 - (void)configNewFeatureVC {
     
     // 新特性图片
-    //判断是否需要显示：（内部已经考虑版本及本地版本缓存）
+    // 判断是否需要显示：（内部已经考虑版本及本地版本缓存）
     BOOL canShow = [CoreNewFeatureVC canShowNewFeature];
     
-    //测试代码，正式版本应该删除
+    // 测试代码，正式版本应该删除
     canShow = kIsDebug;
     
     if(canShow) {
