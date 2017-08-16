@@ -15,6 +15,12 @@
 		23142C371ED81FF500CF2EBE /* BannerViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23142C361ED81FF500CF2EBE /* BannerViewCollectionViewCell.m */; };
 		231EA7AE1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */; };
 		231EA7B71ECAF99400321974 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 231EA7B61ECAF99400321974 /* UIImage+Category.m */; };
+		2323CED11F4410C80075F1B4 /* UIApplication+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CEC41F4410C80075F1B4 /* UIApplication+Extend.m */; };
+		2323CED21F4410C80075F1B4 /* UIView+NFLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CEC61F4410C80075F1B4 /* UIView+NFLayout.m */; };
+		2323CED31F4410C80075F1B4 /* CoreNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CEC81F4410C80075F1B4 /* CoreNewFeatureVC.m */; };
+		2323CED41F4410C80075F1B4 /* NewFeatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CECB1F4410C80075F1B4 /* NewFeatureModel.m */; };
+		2323CED51F4410C80075F1B4 /* NewFeatureImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CECE1F4410C80075F1B4 /* NewFeatureImageV.m */; };
+		2323CED61F4410C80075F1B4 /* NewFeatureScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CED01F4410C80075F1B4 /* NewFeatureScrollView.m */; };
 		234820B31ED412A2000D6620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 234820B21ED412A2000D6620 /* Reachability.m */; };
 		234E159A1F0B2D6E008133C9 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 234E15991F0B2D6E008133C9 /* UIColor+Category.m */; };
 		235666F41F0CBBE100FB3B5E /* YFMarketView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235666F31F0CBBE100FB3B5E /* YFMarketView.m */; };
@@ -108,6 +114,18 @@
 		231EA7AD1ECA910B00321974 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		231EA7B51ECAF99400321974 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		231EA7B61ECAF99400321974 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		2323CEC31F4410C80075F1B4 /* UIApplication+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Extend.h"; sourceTree = "<group>"; };
+		2323CEC41F4410C80075F1B4 /* UIApplication+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extend.m"; sourceTree = "<group>"; };
+		2323CEC51F4410C80075F1B4 /* UIView+NFLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NFLayout.h"; sourceTree = "<group>"; };
+		2323CEC61F4410C80075F1B4 /* UIView+NFLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NFLayout.m"; sourceTree = "<group>"; };
+		2323CEC71F4410C80075F1B4 /* CoreNewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreNewFeatureVC.h; sourceTree = "<group>"; };
+		2323CEC81F4410C80075F1B4 /* CoreNewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreNewFeatureVC.m; sourceTree = "<group>"; };
+		2323CECA1F4410C80075F1B4 /* NewFeatureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeatureModel.h; sourceTree = "<group>"; };
+		2323CECB1F4410C80075F1B4 /* NewFeatureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatureModel.m; sourceTree = "<group>"; };
+		2323CECD1F4410C80075F1B4 /* NewFeatureImageV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeatureImageV.h; sourceTree = "<group>"; };
+		2323CECE1F4410C80075F1B4 /* NewFeatureImageV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatureImageV.m; sourceTree = "<group>"; };
+		2323CECF1F4410C80075F1B4 /* NewFeatureScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeatureScrollView.h; sourceTree = "<group>"; };
+		2323CED01F4410C80075F1B4 /* NewFeatureScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatureScrollView.m; sourceTree = "<group>"; };
 		234820B11ED412A2000D6620 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		234820B21ED412A2000D6620 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		234E15981F0B2D6E008133C9 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -297,6 +315,57 @@
 			children = (
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		2323CEC01F4410C80075F1B4 /* CoreNewFeatureVC */ = {
+			isa = PBXGroup;
+			children = (
+				2323CEC11F4410C80075F1B4 /* Category */,
+				2323CEC71F4410C80075F1B4 /* CoreNewFeatureVC.h */,
+				2323CEC81F4410C80075F1B4 /* CoreNewFeatureVC.m */,
+				2323CEC91F4410C80075F1B4 /* Model */,
+				2323CECC1F4410C80075F1B4 /* View */,
+			);
+			path = CoreNewFeatureVC;
+			sourceTree = "<group>";
+		};
+		2323CEC11F4410C80075F1B4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2323CEC21F4410C80075F1B4 /* UIApplication */,
+				2323CEC51F4410C80075F1B4 /* UIView+NFLayout.h */,
+				2323CEC61F4410C80075F1B4 /* UIView+NFLayout.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2323CEC21F4410C80075F1B4 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				2323CEC31F4410C80075F1B4 /* UIApplication+Extend.h */,
+				2323CEC41F4410C80075F1B4 /* UIApplication+Extend.m */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		2323CEC91F4410C80075F1B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2323CECA1F4410C80075F1B4 /* NewFeatureModel.h */,
+				2323CECB1F4410C80075F1B4 /* NewFeatureModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2323CECC1F4410C80075F1B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2323CECD1F4410C80075F1B4 /* NewFeatureImageV.h */,
+				2323CECE1F4410C80075F1B4 /* NewFeatureImageV.m */,
+				2323CECF1F4410C80075F1B4 /* NewFeatureScrollView.h */,
+				2323CED01F4410C80075F1B4 /* NewFeatureScrollView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		234820B01ED412A2000D6620 /* Reachability */ = {
@@ -939,6 +1008,7 @@
 		23FA7D051E52E91C005F5A17 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2323CEC01F4410C80075F1B4 /* CoreNewFeatureVC */,
 				234820B01ED412A2000D6620 /* Reachability */,
 				231EA7AB1ECA910B00321974 /* MMExampleDrawerVisualStateManager */,
 			);
@@ -1247,7 +1317,10 @@
 			files = (
 				235CC4451F42EEE0004EA379 /* MeViewController.m in Sources */,
 				23FA7D0C1E52E91C005F5A17 /* AppDelegate.m in Sources */,
+				2323CED21F4410C80075F1B4 /* UIView+NFLayout.m in Sources */,
 				235CC4421F42EED8004EA379 /* TradeViewController.m in Sources */,
+				2323CED31F4410C80075F1B4 /* CoreNewFeatureVC.m in Sources */,
+				2323CED41F4410C80075F1B4 /* NewFeatureModel.m in Sources */,
 				2396C4771E53FD2B007BD142 /* CustomNavigationBar.m in Sources */,
 				235CC4391F42EEA3004EA379 /* HomePageViewController.m in Sources */,
 				23FA7D3D1E52F1FC005F5A17 /* CustomTabBarButton.m in Sources */,
@@ -1256,6 +1329,7 @@
 				23D858B21ECD4C6C001007E0 /* CustomNavigationController.m in Sources */,
 				230951A81ED9475000100190 /* YFCalendarView.m in Sources */,
 				23FA7D551E52FE93005F5A17 /* YFSecurityUtil.m in Sources */,
+				2323CED51F4410C80075F1B4 /* NewFeatureImageV.m in Sources */,
 				239508361E5D799B00F7BC7D /* NSString+Category.m in Sources */,
 				23D858B31ECD4C6C001007E0 /* CustomTabBarController.m in Sources */,
 				23FA7D401E52F211005F5A17 /* CustomTabBarBadgeView.m in Sources */,
@@ -1274,6 +1348,7 @@
 				23D858B11ECD4C6C001007E0 /* CustomDrawerController.m in Sources */,
 				23DE66F21ECBE6F000580812 /* JinyuProgressHUD.m in Sources */,
 				23D858BC1ECD4C6C001007E0 /* BaseTableViewCell.m in Sources */,
+				2323CED61F4410C80075F1B4 /* NewFeatureScrollView.m in Sources */,
 				23D858BA1ECD4C6C001007E0 /* BaseScrollView.m in Sources */,
 				23D858B91ECD4C6C001007E0 /* BaseLabel.m in Sources */,
 				237CA1631E568F4300182FE2 /* APPTool.m in Sources */,
@@ -1299,6 +1374,7 @@
 				23FA7D541E52FE93005F5A17 /* NSString+YFMD5_Sha.m in Sources */,
 				23D858B51ECD4C6C001007E0 /* BaseButton.m in Sources */,
 				239508351E5D799B00F7BC7D /* UIView+Category.m in Sources */,
+				2323CED11F4410C80075F1B4 /* UIApplication+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

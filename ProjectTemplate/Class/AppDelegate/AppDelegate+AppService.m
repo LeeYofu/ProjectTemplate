@@ -10,6 +10,8 @@
 #import <UMMobClick/MobClick.h>
 #import <AvoidCrash.h>
 #import "XHLaunchAd.h"
+#import "CoreNewFeatureVC.h"
+#import "CustomTabBarController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -20,9 +22,10 @@
     [self configTextFieldTextViewTintColor];
     [self configIQKeyboardManager];
     [self configMobClick];
-//    [self configLaunchAdvertisementView];
+    //    [self configLaunchAdvertisementView];
     [self configAvoidCrash];
     [self configStatusBarHiddenWhenLaunch];
+    [self configNewFeatureVC];
 }
 
 #pragma mark - 推送通知
@@ -89,6 +92,59 @@
 - (void)configStatusBarHiddenWhenLaunch {
     
     [UIApplication sharedApplication].statusBarHidden = NO;
+}
+
+#pragma mark - 新特性引导图
+- (void)configNewFeatureVC {
+    
+    // 新特性图片
+    //判断是否需要显示：（内部已经考虑版本及本地版本缓存）
+    BOOL canShow = [CoreNewFeatureVC canShowNewFeature];
+    
+    //测试代码，正式版本应该删除
+    canShow = kIsDebug;
+    
+    if(canShow) {
+        
+        NSMutableArray *modelArray = [NSMutableArray new];
+        NSString *imageName = @"";
+        for (int i = 0; i < 4; i ++) {
+            
+            if (kIsIphone4) {
+                
+                imageName = [NSString stringWithFormat:@"4_%02d", i + 1];
+            } else if (kIsIphone5) {
+                
+                imageName = [NSString stringWithFormat:@"5_%02d", i + 1];
+            } else if (kIsIphone6) {
+                
+                imageName = [NSString stringWithFormat:@"6_%02d", i + 1];
+            } else if (kIsIphone6P) {
+                
+                imageName = [NSString stringWithFormat:@"7_%02d", i + 1];
+            } else {
+                
+                
+            }
+            UIImage *image = [UIImage imageNamed:imageName];
+            NewFeatureModel *model = [NewFeatureModel model:image];
+            
+            [modelArray addObject:model];
+        }
+        
+        self.window.rootViewController = [CoreNewFeatureVC newFeatureVCWithModels:modelArray enterBlock:^{
+            
+            [self enterMainVC];
+        }];
+    } else {
+        
+        [self enterMainVC];
+    }
+}
+
+- (void)enterMainVC {
+    
+    self.window.rootViewController = [CustomTabBarController new];
 }
 
 #pragma mark - Other

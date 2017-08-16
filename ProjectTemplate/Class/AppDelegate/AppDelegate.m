@@ -19,12 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self config];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [CustomTabBarController new];
+    [self config];
     
     [self.window makeKeyAndVisible];
     

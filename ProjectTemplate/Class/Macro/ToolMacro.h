@@ -93,7 +93,10 @@ return shared##className; \
 #define kPropertyNSMutableArray(s)  @property(nonatomic,strong)NSMutableArray * s
 
 
-
+#define kIsIphone5 (kScreenHeight == 568)
+#define kIsIphone4 (kScreenHeight == 480)
+#define kIsIphone6 (kScreenHeight == 667)
+#define kIsIphone6P (kScreenWidth == 414)
 
 
 #endif /* ToolMarco_h */

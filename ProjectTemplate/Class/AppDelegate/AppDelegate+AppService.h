@@ -20,5 +20,6 @@
 - (void)configLaunchAdvertisementView;
 - (void)configAvoidCrash;
 - (void)configStatusBarHiddenWhenLaunch;
+- (void)configNewFeatureVC;
 
 @end

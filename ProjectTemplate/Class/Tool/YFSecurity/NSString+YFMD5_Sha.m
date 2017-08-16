@@ -16,12 +16,12 @@
     
     const char *cStr = [self UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    CC_MD5( cStr, strlen(cStr), digest );
-    NSMutableString *md5_32Bit_String = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    CC_MD5( cStr, strlen(cStr), digest);
+    NSMutableString *md5_16Bit_String = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
-        [md5_32Bit_String appendFormat:@"%02x", digest[i]];
+        [md5_16Bit_String appendFormat:@"%02x", digest[i]];
     //提取32位MD5散列的中间16位
-    NSString *result = [[md5_32Bit_String substringToIndex:24] substringFromIndex:8];//即9～25位
+    NSString *result = [[md5_16Bit_String substringToIndex:24] substringFromIndex:8];//即9～25位
     
     return result;
 }
@@ -32,7 +32,7 @@
     
     const char *cStr = [self UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    CC_MD5( cStr, strlen(cStr), digest );
+    CC_MD5( cStr, strlen(cStr), digest);
     NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
         [result appendFormat:@"%02x", digest[i]];
