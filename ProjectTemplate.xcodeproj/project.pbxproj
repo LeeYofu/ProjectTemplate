@@ -23,7 +23,6 @@
 		2323CED61F4410C80075F1B4 /* NewFeatureScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CED01F4410C80075F1B4 /* NewFeatureScrollView.m */; };
 		234820B31ED412A2000D6620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 234820B21ED412A2000D6620 /* Reachability.m */; };
 		234E159A1F0B2D6E008133C9 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 234E15991F0B2D6E008133C9 /* UIColor+Category.m */; };
-		235666F41F0CBBE100FB3B5E /* YFMarketView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235666F31F0CBBE100FB3B5E /* YFMarketView.m */; };
 		2357CE5A1E5FDA5500629D2D /* IMG_1485.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE571E5FDA5500629D2D /* IMG_1485.JPG */; };
 		2357CE5B1E5FDA5500629D2D /* IMG_1486.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE581E5FDA5500629D2D /* IMG_1486.JPG */; };
 		2357CE5C1E5FDA5500629D2D /* IMG_1487.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE591E5FDA5500629D2D /* IMG_1487.JPG */; };
@@ -130,9 +129,6 @@
 		234820B21ED412A2000D6620 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		234E15981F0B2D6E008133C9 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
 		234E15991F0B2D6E008133C9 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
-		235666F21F0CBBE100FB3B5E /* YFMarketView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMarketView.h; sourceTree = "<group>"; };
-		235666F31F0CBBE100FB3B5E /* YFMarketView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMarketView.m; sourceTree = "<group>"; };
-		235666F51F0CBEEB00FB3B5E /* YFMarketMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMarketMacro.h; sourceTree = "<group>"; };
 		2357CE571E5FDA5500629D2D /* IMG_1485.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1485.JPG; sourceTree = "<group>"; };
 		2357CE581E5FDA5500629D2D /* IMG_1486.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1486.JPG; sourceTree = "<group>"; };
 		2357CE591E5FDA5500629D2D /* IMG_1487.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1487.JPG; sourceTree = "<group>"; };
@@ -368,6 +364,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2323CED71F441D8B0075F1B4 /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RefreshView;
+			sourceTree = "<group>";
+		};
 		234820B01ED412A2000D6620 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,104 +378,6 @@
 				234820B21ED412A2000D6620 /* Reachability.m */,
 			);
 			path = Reachability;
-			sourceTree = "<group>";
-		};
-		235666E51F0CBA4100FB3B5E /* YFMarket */ = {
-			isa = PBXGroup;
-			children = (
-				235666E61F0CBA4100FB3B5E /* Data */,
-				235666E71F0CBA4100FB3B5E /* Helper */,
-				235666E81F0CBA4100FB3B5E /* Macro */,
-				235666EA1F0CBA4100FB3B5E /* Model */,
-				235666EB1F0CBA4100FB3B5E /* Tool */,
-				235666EC1F0CBA4100FB3B5E /* View */,
-			);
-			path = YFMarket;
-			sourceTree = "<group>";
-		};
-		235666E61F0CBA4100FB3B5E /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		235666E71F0CBA4100FB3B5E /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		235666E81F0CBA4100FB3B5E /* Macro */ = {
-			isa = PBXGroup;
-			children = (
-				235666F51F0CBEEB00FB3B5E /* YFMarketMacro.h */,
-			);
-			path = Macro;
-			sourceTree = "<group>";
-		};
-		235666EA1F0CBA4100FB3B5E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		235666EB1F0CBA4100FB3B5E /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		235666EC1F0CBA4100FB3B5E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				235666F11F0CBBB700FB3B5E /* Market */,
-				235666ED1F0CBA4100FB3B5E /* IndexBar */,
-				235666EE1F0CBA4100FB3B5E /* KLine */,
-				235666EF1F0CBA4100FB3B5E /* MaskView */,
-				235666F01F0CBA4100FB3B5E /* TimeLine */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		235666ED1F0CBA4100FB3B5E /* IndexBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = IndexBar;
-			sourceTree = "<group>";
-		};
-		235666EE1F0CBA4100FB3B5E /* KLine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = KLine;
-			sourceTree = "<group>";
-		};
-		235666EF1F0CBA4100FB3B5E /* MaskView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MaskView;
-			sourceTree = "<group>";
-		};
-		235666F01F0CBA4100FB3B5E /* TimeLine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TimeLine;
-			sourceTree = "<group>";
-		};
-		235666F11F0CBBB700FB3B5E /* Market */ = {
-			isa = PBXGroup;
-			children = (
-				235666F21F0CBBE100FB3B5E /* YFMarketView.h */,
-				235666F31F0CBBE100FB3B5E /* YFMarketView.m */,
-			);
-			path = Market;
 			sourceTree = "<group>";
 		};
 		2357CE561E5FDA5500629D2D /* BannerPic */ = {
@@ -969,7 +874,7 @@
 		23FA7D011E52E91C005F5A17 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				235666E51F0CBA4100FB3B5E /* YFMarket */,
+				2323CED71F441D8B0075F1B4 /* RefreshView */,
 				230951A51ED9471900100190 /* YFCalendar */,
 				23142C311ED81D7600CF2EBE /* BannerView */,
 				23EC4B831ED680E500747C93 /* YFSegmentedControl */,
@@ -1353,7 +1258,6 @@
 				23D858B91ECD4C6C001007E0 /* BaseLabel.m in Sources */,
 				237CA1631E568F4300182FE2 /* APPTool.m in Sources */,
 				23D858BE1ECD4C6C001007E0 /* BaseView.m in Sources */,
-				235666F41F0CBBE100FB3B5E /* YFMarketView.m in Sources */,
 				23D858B41ECD4C6C001007E0 /* BaseModel.m in Sources */,
 				230951B71ED9732400100190 /* YFDayCollectionViewCell.m in Sources */,
 				234820B31ED412A2000D6620 /* Reachability.m in Sources */,
