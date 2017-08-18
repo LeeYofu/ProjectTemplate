@@ -63,7 +63,7 @@
 #define kFontR(size) [UIFont systemFontOfSize:size weight:UIFontWeightRegular]
 #define kFontB(size) [UIFont systemFontOfSize:size weight:UIFontWeightBold]
 #define kFontT(size) [UIFont systemFontOfSize:size weight:UIFontWeightThin]
-#define kFont(size) FontL(s)
+#define kFont(size) kFontL(size)
 
 
 #pragma mark - Frame

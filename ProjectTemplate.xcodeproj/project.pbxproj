@@ -21,6 +21,7 @@
 		2323CED41F4410C80075F1B4 /* NewFeatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CECB1F4410C80075F1B4 /* NewFeatureModel.m */; };
 		2323CED51F4410C80075F1B4 /* NewFeatureImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CECE1F4410C80075F1B4 /* NewFeatureImageV.m */; };
 		2323CED61F4410C80075F1B4 /* NewFeatureScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2323CED01F4410C80075F1B4 /* NewFeatureScrollView.m */; };
+		233E10741F456747007E8BC6 /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 233E10731F456747007E8BC6 /* TestCollectionViewCell.m */; };
 		234820B31ED412A2000D6620 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 234820B21ED412A2000D6620 /* Reachability.m */; };
 		234E159A1F0B2D6E008133C9 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 234E15991F0B2D6E008133C9 /* UIColor+Category.m */; };
 		2357CE5A1E5FDA5500629D2D /* IMG_1485.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2357CE571E5FDA5500629D2D /* IMG_1485.JPG */; };
@@ -125,6 +126,8 @@
 		2323CECE1F4410C80075F1B4 /* NewFeatureImageV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatureImageV.m; sourceTree = "<group>"; };
 		2323CECF1F4410C80075F1B4 /* NewFeatureScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFeatureScrollView.h; sourceTree = "<group>"; };
 		2323CED01F4410C80075F1B4 /* NewFeatureScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeatureScrollView.m; sourceTree = "<group>"; };
+		233E10721F456747007E8BC6 /* TestCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewCell.h; sourceTree = "<group>"; };
+		233E10731F456747007E8BC6 /* TestCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCollectionViewCell.m; sourceTree = "<group>"; };
 		234820B11ED412A2000D6620 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		234820B21ED412A2000D6620 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		234E15981F0B2D6E008133C9 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
@@ -471,6 +474,8 @@
 		235CC4261F42EE61004EA379 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				233E10721F456747007E8BC6 /* TestCollectionViewCell.h */,
+				233E10731F456747007E8BC6 /* TestCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1254,6 +1259,7 @@
 				23DE66F21ECBE6F000580812 /* JinyuProgressHUD.m in Sources */,
 				23D858BC1ECD4C6C001007E0 /* BaseTableViewCell.m in Sources */,
 				2323CED61F4410C80075F1B4 /* NewFeatureScrollView.m in Sources */,
+				233E10741F456747007E8BC6 /* TestCollectionViewCell.m in Sources */,
 				23D858BA1ECD4C6C001007E0 /* BaseScrollView.m in Sources */,
 				23D858B91ECD4C6C001007E0 /* BaseLabel.m in Sources */,
 				237CA1631E568F4300182FE2 /* APPTool.m in Sources */,
